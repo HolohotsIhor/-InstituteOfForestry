@@ -1,8 +1,10 @@
 $(document).ready(function() {
-    /* Burger */
+
+    /********** Burger **********/
     $(".toggle_mnu").click(function() {
         $(".sandwich").toggleClass("active");
     });
+
     /* Burger. Hover */
     $(".top_mnu ul a").click(function() {
         $(".top_mnu").fadeOut(600);
@@ -14,14 +16,34 @@ $(document).ready(function() {
     $(".toggle_mnu").click(function() {
         if ($(".top_mnu").is(":visible")) {
             $(".top_text").css("opacity", "1");
-            $(".top_mnu").fadeOut(600);
+            $(".top_mnu").fadeOut(100);
+            $(".top_mnu").css("left", "-100%");
             $(".top_mnu li a").removeClass("fadeInUp animated");
         } else {
             $(".top_text").css("opacity", ".1");
-            $(".top_mnu").fadeIn(600);
+            $(".top_mnu").fadeIn(100);
+            $(".top_mnu").css("left", "0");
             $(".top_mnu li a").addClass("fadeInUp animated");
         };
     });
+
+    /********** Sticky menu **********/
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() { myFunction() };
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            navbar.classList.remove("no-sticky");
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+            navbar.classList.add("no-sticky");
+        }
+    }
 
     /* Parallax 
     $('.parallax-window').parallax({imageSrc: 'img/background.jpg'}); */
@@ -34,7 +56,7 @@ $(document).ready(function() {
     $(window).resize(function(){
         heightDetect();
     });
-     */
+    */
 
     /* Scrool animation
     $(window).scroll(function() {
