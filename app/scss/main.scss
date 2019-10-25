@@ -4,6 +4,8 @@
 2.  General styles
 3.  Header
 4.  Form
+5.  Slider
+6.  About works
 
 */
 
@@ -11,8 +13,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap');
 
 /* 2.  General styles */
-$padding-standart: 120px 0px;
-$padding-small: 90px 0px;
+$padding-standart: 100px 0px;
+$padding-small: 70px 0px;
 $typography-color-standart: 16px;
 $blue: rgb(15, 148, 219);
 $gold: #ffe5db;
@@ -125,6 +127,7 @@ header {
         .bottom-bar {
             padding: 11.5px 0 7.5px 0;
             top: 0;
+            z-index: 1;
 
             @media only screen and (max-device-width: 991px) {
                 padding: 19.5px 0 15.5px 0;
@@ -142,6 +145,7 @@ header {
         display: none;
         visibility: hidden;
         animation-duration: .6s;
+        z-index: 99;
 
         .toggle_mnu_search {
             width: 50px;
@@ -348,6 +352,7 @@ header {
         width: 100%;
         background-color: $white;
         transition: .2s;
+        z-index: 1;
 
         @media only screen and (max-device-width: 991px) {
             padding: 19.5px 0 15.5px 0;
@@ -376,7 +381,7 @@ header {
                 }
 
                 h1 {
-                    color: #007929;
+                    color: #2b2b2b;
                     font-size: 16px;
                     display: inline-block;
                     line-height: 14px;
@@ -464,7 +469,8 @@ header {
                         line-height: 36px;
                         font-size: 13px;
                         font-weight: 400px;
-                        padding-bottom: 100px;
+                        padding-bottom: 32px;
+                        cursor: pointer;
 
                         @media only screen and (max-device-width: 1100px) {
                             font-size: 12px;
@@ -1114,3 +1120,84 @@ textarea {
     }
 }
 */
+
+
+/* 5.  Slider */
+.slider{
+    background-color: #335a21;
+    padding: 0;
+
+    .carousel{
+
+        .carousel-inner{
+
+            .carousel-item{
+
+                img{
+                    height: 680px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+/* 6.  About works */
+.about-works{
+
+    .item-box{
+
+        @media only screen and (max-device-width: 991px) {
+            margin-bottom: 60px;
+        }
+
+        img{
+            margin-bottom: 25px;
+
+            @media only screen and (max-device-width: 767px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        h3{
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 20px;
+
+            @media only screen and (max-device-width: 767px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        p{
+            color: #3c5561;
+            line-height: 29px;
+            font-size: 14px;
+            margin-bottom: 40px;
+
+            @media only screen and (max-device-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .grid-button{
+
+            a{
+                background-color: $green;
+                font-size: 14px;
+                font-weight: 400;
+                outline: none;
+                padding: 10px 22px 10px 22px;
+                text-transform: uppercase;
+                color: $white;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover{
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}

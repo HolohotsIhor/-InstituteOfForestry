@@ -50,7 +50,10 @@ $(document).ready(function() {
         $(".modal-window-search").css("visibility", "hidden");
     });
 
-
+    /************** Slider ***************/
+    $('.carousel').carousel({
+      interval: 6000
+    })
 
 
 

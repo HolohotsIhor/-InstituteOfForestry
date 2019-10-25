@@ -4,6 +4,8 @@
 2.  General styles
 3.  Header
 4.  Form
+5.  Slider
+6.  About works
 
 */
 /* 1.  Fonts including */
@@ -18,11 +20,11 @@ body {
   font-size: 16px; }
 
 section {
-  padding: 120px 0px;
+  padding: 100px 0px;
   text-align: center; }
   @media only screen and (max-device-width: 767px) {
     section {
-      padding: 90px 0px; } }
+      padding: 70px 0px; } }
 
 input {
   outline: 0;
@@ -85,7 +87,8 @@ header {
   /* Mobile navigation */ }
   header.sticky .bottom-bar {
     padding: 11.5px 0 7.5px 0;
-    top: 0; }
+    top: 0;
+    z-index: 1; }
     @media only screen and (max-device-width: 991px) {
       header.sticky .bottom-bar {
         padding: 19.5px 0 15.5px 0; } }
@@ -99,7 +102,8 @@ header {
     display: none;
     visibility: hidden;
     -webkit-animation-duration: .6s;
-            animation-duration: .6s; }
+            animation-duration: .6s;
+    z-index: 99; }
     header .modal-window-search .toggle_mnu_search {
       width: 50px;
       height: 60px;
@@ -251,7 +255,8 @@ header {
     background-color: #fff;
     -webkit-transition: .2s;
     -o-transition: .2s;
-    transition: .2s; }
+    transition: .2s;
+    z-index: 1; }
     @media only screen and (max-device-width: 991px) {
       header .bottom-bar {
         padding: 19.5px 0 15.5px 0;
@@ -272,7 +277,7 @@ header {
             header .bottom-bar .header__logo-box a img {
               margin-top: -9px; } }
         header .bottom-bar .header__logo-box a h1 {
-          color: #007929;
+          color: #2b2b2b;
           font-size: 16px;
           display: inline-block;
           line-height: 14px;
@@ -332,7 +337,8 @@ header {
           line-height: 36px;
           font-size: 13px;
           font-weight: 400px;
-          padding-bottom: 100px; }
+          padding-bottom: 32px;
+          cursor: pointer; }
           @media only screen and (max-device-width: 1100px) {
             header .bottom-bar .header__nav ul li a {
               font-size: 12px; } }
@@ -913,3 +919,55 @@ textarea {
     }
 }
 */
+/* 5.  Slider */
+.slider {
+  background-color: #335a21;
+  padding: 0; }
+  .slider .carousel .carousel-inner .carousel-item img {
+    height: 680px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+/* 6.  About works */
+@media only screen and (max-device-width: 991px) {
+  .about-works .item-box {
+    margin-bottom: 60px; } }
+
+.about-works .item-box img {
+  margin-bottom: 25px; }
+  @media only screen and (max-device-width: 767px) {
+    .about-works .item-box img {
+      margin-bottom: 20px; } }
+
+.about-works .item-box h3 {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 20px; }
+  @media only screen and (max-device-width: 767px) {
+    .about-works .item-box h3 {
+      margin-bottom: 15px; } }
+
+.about-works .item-box p {
+  color: #3c5561;
+  line-height: 29px;
+  font-size: 14px;
+  margin-bottom: 40px; }
+  @media only screen and (max-device-width: 767px) {
+    .about-works .item-box p {
+      margin-bottom: 30px; } }
+
+.about-works .item-box .grid-button a {
+  background-color: #6ab43e;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  padding: 10px 22px 10px 22px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .about-works .item-box .grid-button a:hover {
+    background-color: #000; }
