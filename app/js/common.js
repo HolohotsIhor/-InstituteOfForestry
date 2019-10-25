@@ -55,10 +55,6 @@ $(document).ready(function() {
       interval: 6000
     })
 
-
-
-
-
     /********** Sticky menu **********/
     // When the user scrolls the page, execute myFunction
     window.onscroll = function() { myFunction() };
@@ -77,6 +73,37 @@ $(document).ready(function() {
         }
     }
 
+    /************ Scrool animation ************/
+    $(window).scroll(function() {
+
+        $('.mov').each(function() {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 600) {
+                $(this).addClass('fadeIn animated');
+                $(this).css('opacity', '1');
+            }
+        });
+
+        // $('.mov-left').each(function() {
+        //     var imagePos = $(this).offset().top;
+        //     var topOfWindow = $(window).scrollTop();
+        //     if (imagePos < topOfWindow + 600) {
+        //         $(this).addClass('fadeInLeft animated');
+        //         $(this).css('opacity', '1');
+        //     }
+        // });
+
+        // $('.mov-right').each(function() {
+        //     var imagePos = $(this).offset().top;
+        //     var topOfWindow = $(window).scrollTop();
+        //     if (imagePos < topOfWindow + 600) {
+        //         $(this).addClass('fadeInRight animated');
+        //         $(this).css('opacity', '1');
+        //     }
+        // });
+    });
+
     /* Parallax 
     $('.parallax-window').parallax({imageSrc: 'img/background.jpg'}); */
 
@@ -89,35 +116,4 @@ $(document).ready(function() {
         heightDetect();
     });
     */
-
-    /* Scrool animation
-    $(window).scroll(function() {
-
-        $('.mov').each(function() {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 600) {
-                $(this).addClass('fadeIn animated');
-                $(this).css('opacity', '1');
-            }
-        });
-
-        $('.mov-left').each(function() {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 600) {
-                $(this).addClass('fadeInLeft animated');
-                $(this).css('opacity', '1');
-            }
-        });
-
-        $('.mov-right').each(function() {
-            var imagePos = $(this).offset().top;
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 600) {
-                $(this).addClass('fadeInRight animated');
-                $(this).css('opacity', '1');
-            }
-        });
-    });*/
 });

@@ -929,45 +929,55 @@ textarea {
        object-fit: cover; }
 
 /* 6.  About works */
-@media only screen and (max-device-width: 991px) {
-  .about-works .item-box {
-    margin-bottom: 60px; } }
-
-.about-works .item-box img {
-  margin-bottom: 25px; }
-  @media only screen and (max-device-width: 767px) {
-    .about-works .item-box img {
-      margin-bottom: 20px; } }
-
-.about-works .item-box h3 {
-  color: #333;
-  font-size: 22px;
-  margin-bottom: 20px; }
-  @media only screen and (max-device-width: 767px) {
-    .about-works .item-box h3 {
-      margin-bottom: 15px; } }
-
-.about-works .item-box p {
-  color: #3c5561;
-  line-height: 29px;
-  font-size: 14px;
-  margin-bottom: 40px; }
-  @media only screen and (max-device-width: 767px) {
-    .about-works .item-box p {
-      margin-bottom: 30px; } }
-
-.about-works .item-box .grid-button a {
-  background-color: #6ab43e;
-  font-size: 14px;
-  font-weight: 400;
-  outline: none;
-  padding: 10px 22px 10px 22px;
-  text-transform: uppercase;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
-  .about-works .item-box .grid-button a:hover {
-    background-color: #000; }
+.about-works .item-box {
+  opacity: 0; }
+  @media only screen and (max-device-width: 991px) {
+    .about-works .item-box {
+      margin-bottom: 60px; } }
+  .about-works .item-box:nth-child(1) {
+    -webkit-animation-delay: .1s;
+            animation-delay: .1s; }
+  .about-works .item-box:nth-child(2) {
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s; }
+  .about-works .item-box:nth-child(3) {
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s; }
+  .about-works .item-box:nth-child(4) {
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s; }
+  .about-works .item-box img {
+    margin-bottom: 25px; }
+    @media only screen and (max-device-width: 767px) {
+      .about-works .item-box img {
+        margin-bottom: 20px; } }
+  .about-works .item-box h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px; }
+    @media only screen and (max-device-width: 767px) {
+      .about-works .item-box h3 {
+        margin-bottom: 15px; } }
+  .about-works .item-box p {
+    color: #3c5561;
+    line-height: 29px;
+    font-size: 14px;
+    margin-bottom: 40px; }
+    @media only screen and (max-device-width: 767px) {
+      .about-works .item-box p {
+        margin-bottom: 30px; } }
+  .about-works .item-box .grid-button a {
+    background-color: #6ab43e;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    padding: 10px 22px 10px 22px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    .about-works .item-box .grid-button a:hover {
+      background-color: #000; }
