@@ -6,6 +6,10 @@
 4.  Form
 5.  Slider
 6.  About works
+7.  Banner with new
+8.  News-zone
+9.  Our partners
+10. Footer
 
 */
 /* 1.  Fonts including */
@@ -19,11 +23,11 @@ body {
   max-width: 100%;
   font-size: 16px; }
 
-section {
+section, footer {
   padding: 100px 0px;
   text-align: center; }
   @media only screen and (max-device-width: 767px) {
-    section {
+    section, footer {
       padding: 70px 0px; } }
 
 input {
@@ -49,21 +53,50 @@ select {
   height: 0;
   clear: both; }
 
+.section-title {
+  font-size: 29px;
+  letter-spacing: 1px;
+  margin-bottom: 0; }
+  .section-title:after {
+    bottom: -25px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    background-color: #6ab43e; }
+
 ul {
   margin-bottom: 0; }
 
-h2 {
-  font-size: 50px; }
+h2,
+h3,
+h4,
+h5 {
+  font-size: 50px;
+  text-transform: uppercase; }
   @media only screen and (max-device-width: 1199px) {
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5 {
       font-size: 42px;
       line-height: 42px; } }
   @media only screen and (max-device-width: 991px) {
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5 {
       font-size: 27px;
       line-height: 30px; } }
   @media only screen and (max-device-width: 545px) {
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5 {
       font-size: 20px;
       line-height: 25px; } }
 
@@ -88,10 +121,12 @@ header {
   header.sticky .bottom-bar {
     padding: 11.5px 0 7.5px 0;
     top: 0;
-    z-index: 1; }
+    z-index: 2; }
     @media only screen and (max-device-width: 991px) {
       header.sticky .bottom-bar {
         padding: 19.5px 0 15.5px 0; } }
+    header.sticky .bottom-bar .header__nav ul li a:hover ~ ul.sub-menu {
+      top: 49px; }
   header .modal-window-search {
     position: absolute;
     top: 0;
@@ -239,7 +274,8 @@ header {
             font-size: 12px;
             color: #fff;
             background-color: transparent;
-            cursor: pointer; }
+            cursor: pointer;
+            border: 0; }
             header .top-bar .right-side .wrapper .language-switcher select:focus, header .top-bar .right-side .wrapper .language-switcher select:hover {
               outline: 0; }
             header .top-bar .right-side .wrapper .language-switcher select option {
@@ -981,3 +1017,162 @@ textarea {
     transition: .3s; }
     .about-works .item-box .grid-button a:hover {
       background-color: #000; }
+
+/* 7.  Banner with new */
+.new-banner {
+  position: relative;
+  background: url("../img/banner-with-new.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; }
+  .new-banner h2 {
+    color: #fff; }
+    .new-banner h2:after {
+      background: #fff;
+      position: relative; }
+  .new-banner p {
+    color: #fff;
+    position: relative;
+    font-weight: 300;
+    line-height: 32px;
+    margin-top: 60px; }
+  .new-banner::before {
+    background: rgba(106, 180, 62, 0.8);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/********** 8.  News-zone *********/
+.news-zone .section-title {
+  color: #333;
+  margin-bottom: 0; }
+  .news-zone .section-title:after {
+    background: #6ab43e; }
+
+.news-zone .owl-carousel {
+  margin-top: 70px; }
+  .news-zone .owl-carousel .owl-dots {
+    display: none; }
+  .news-zone .owl-carousel .owl-item {
+    color: #333; }
+    .news-zone .owl-carousel .owl-item a {
+      color: #333;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+      .news-zone .owl-carousel .owl-item a:hover {
+        color: #6ab43e; }
+    .news-zone .owl-carousel .owl-item img {
+      max-width: 100%; }
+    .news-zone .owl-carousel .owl-item .text-content {
+      text-align: left;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: normal;
+      border: 1px solid #eee;
+      padding: 20px; }
+      .news-zone .owl-carousel .owl-item .text-content h2 a {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 15px; }
+      .news-zone .owl-carousel .owl-item .text-content .author-info {
+        margin-bottom: 20px; }
+        .news-zone .owl-carousel .owl-item .text-content .author-info span {
+          margin-right: 20px; }
+          .news-zone .owl-carousel .owl-item .text-content .author-info span:last-child {
+            margin-right: 0; }
+          .news-zone .owl-carousel .owl-item .text-content .author-info span i {
+            margin-right: 3px; }
+      .news-zone .owl-carousel .owl-item .text-content p {
+        line-height: 28px;
+        margin-bottom: 20px; }
+      .news-zone .owl-carousel .owl-item .text-content a.read-more {
+        font-weight: bold; }
+  .news-zone .owl-carousel .owl-nav {
+    position: absolute;
+    top: -60px;
+    right: 0; }
+    .news-zone .owl-carousel .owl-nav button {
+      width: 30px;
+      height: 30px; }
+      .news-zone .owl-carousel .owl-nav button.owl-prev, .news-zone .owl-carousel .owl-nav button.owl-next {
+        background-color: #6ab43e;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 30px;
+        line-height: 30px;
+        outline: none; }
+        .news-zone .owl-carousel .owl-nav button.owl-prev:hover, .news-zone .owl-carousel .owl-nav button.owl-next:hover {
+          background-color: #000; }
+
+/*********** 9.  Our partners *************/
+.our-partners {
+  padding-top: 0; }
+  .our-partners .section-title {
+    color: #333; }
+    .our-partners .section-title:after {
+      background: #6ab43e; }
+  .our-partners .carousel-box {
+    margin-top: 60px; }
+    .our-partners .carousel-box .item {
+      opacity: 0; }
+
+/************ 10. Footer *******************/
+footer {
+  background-color: #202020;
+  text-align: left;
+  font-size: 14px;
+  line-height: 28px;
+  color: #7f7f7f; }
+  footer .item-grid i {
+    color: #6ab43e;
+    font-size: 18px;
+    margin-right: 5px; }
+  footer .item-grid img {
+    max-width: 100%;
+    width: 100px; }
+  footer .item-grid a {
+    color: #7f7f7f; }
+    footer .item-grid a:hover {
+      color: #6ab43e; }
+    footer .item-grid a.footer__logo {
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 10px; }
+      footer .item-grid a.footer__logo img {
+        margin-top: -20px;
+        margin-right: 5px;
+        max-width: 100px;
+        margin-bottom: 15px; }
+        @media only screen and (max-device-width: 1100px) {
+          footer .item-grid a.footer__logo img {
+            max-width: 85px; } }
+        @media only screen and (max-device-width: 380px) {
+          footer .item-grid a.footer__logo img {
+            margin-top: -9px; } }
+      footer .item-grid a.footer__logo h1 {
+        color: #007929;
+        font-size: 16px;
+        line-height: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0; }
+        @media only screen and (max-device-width: 1100px) {
+          footer .item-grid a.footer__logo h1 {
+            font-size: 12px; } }
+        @media only screen and (max-device-width: 380px) {
+          footer .item-grid a.footer__logo h1 {
+            display: none; } }
+        footer .item-grid a.footer__logo h1 span {
+          font-size: 12px;
+          letter-spacing: 1px; }
+          @media only screen and (max-device-width: 1100px) {
+            footer .item-grid a.footer__logo h1 span {
+              font-size: 9px; } }
+  footer .item-grid ul li {
+    margin-bottom: 10px; }

@@ -6,6 +6,10 @@
 4.  Form
 5.  Slider
 6.  About works
+7.  Banner with new
+8.  News-zone
+9.  Our partners
+10. Footer
 
 */
 
@@ -32,7 +36,7 @@ body {
     font-size: $typography-color-standart;
 }
 
-section {
+section, footer {
     padding: $padding-standart;
     text-align: center;
 
@@ -75,12 +79,35 @@ select {
     }
 }
 
+.section-title {
+    font-size: 29px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+
+    &:after {
+        bottom: -25px;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        width: 40px;
+        background-color: #6ab43e;
+    }
+}
+
 ul {
     margin-bottom: 0;
 }
 
-h2 {
+h2,
+h3,
+h4,
+h5 {
     font-size: 50px;
+    text-transform: uppercase;
 
     @media only screen and (max-device-width: 1199px) {
         font-size: 42px;
@@ -127,10 +154,23 @@ header {
         .bottom-bar {
             padding: 11.5px 0 7.5px 0;
             top: 0;
-            z-index: 1;
+            z-index: 2;
 
             @media only screen and (max-device-width: 991px) {
                 padding: 19.5px 0 15.5px 0;
+            }
+
+            .header__nav{
+
+                ul{
+
+                    li{
+
+                        a:hover ~ ul.sub-menu{
+                            top: 49px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -327,6 +367,7 @@ header {
                         color: $white;
                         background-color: transparent;
                         cursor: pointer;
+                        border: 0;
 
                         &:focus,
                         &:hover {
@@ -1123,17 +1164,17 @@ textarea {
 
 
 /* 5.  Slider */
-.slider{
+.slider {
     background-color: #335a21;
     padding: 0;
 
-    .carousel{
+    .carousel {
 
-        .carousel-inner{
+        .carousel-inner {
 
-            .carousel-item{
+            .carousel-item {
 
-                img{
+                img {
                     height: 680px;
                     object-fit: cover;
                 }
@@ -1143,32 +1184,32 @@ textarea {
 }
 
 /* 6.  About works */
-.about-works{
+.about-works {
 
-    .item-box{
+    .item-box {
         opacity: 0;
 
         @media only screen and (max-device-width: 991px) {
             margin-bottom: 60px;
         }
 
-        &:nth-child(1){
+        &:nth-child(1) {
             animation-delay: .1s;
         }
 
-        &:nth-child(2){
+        &:nth-child(2) {
             animation-delay: .2s;
         }
 
-        &:nth-child(3){
+        &:nth-child(3) {
             animation-delay: .3s;
         }
 
-        &:nth-child(4){
+        &:nth-child(4) {
             animation-delay: .4s;
         }
 
-        img{
+        img {
             margin-bottom: 25px;
 
             @media only screen and (max-device-width: 767px) {
@@ -1176,7 +1217,7 @@ textarea {
             }
         }
 
-        h3{
+        h3 {
             color: #333;
             font-size: 22px;
             margin-bottom: 20px;
@@ -1186,7 +1227,7 @@ textarea {
             }
         }
 
-        p{
+        p {
             color: #3c5561;
             line-height: 29px;
             font-size: 14px;
@@ -1197,9 +1238,9 @@ textarea {
             }
         }
 
-        .grid-button{
+        .grid-button {
 
-            a{
+            a {
                 background-color: $green;
                 font-size: 14px;
                 font-weight: 400;
@@ -1211,9 +1252,262 @@ textarea {
                 cursor: pointer;
                 transition: .3s;
 
-                &:hover{
+                &:hover {
                     background-color: #000;
                 }
+            }
+        }
+    }
+}
+
+
+/* 7.  Banner with new */
+.new-banner {
+    position: relative;
+    background: url('../img/banner-with-new.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    h2 {
+        color: $white;
+
+        &:after {
+            background: #fff;
+            position: relative;
+        }
+    }
+
+    p {
+        color: $white;
+        position: relative;
+        font-weight: 300;
+        line-height: 32px;
+        margin-top: 60px;
+    }
+
+
+    &::before {
+        background: rgba(106, 180, 62, 0.8);
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+/********** 8.  News-zone *********/
+.news-zone{
+
+    .section-title{
+        color: #333;
+        margin-bottom: 0;
+
+        &:after{
+            background: $green;
+        }
+    }
+
+    .owl-carousel{
+
+        margin-top: 70px;
+
+        .owl-dots{
+            display: none;
+        }
+
+        .owl-item{
+            color: #333;
+
+            a{
+                color: #333;
+                transition: .2s;
+
+                &:hover{
+                    color: $green;
+                }
+            }
+
+            img{
+                max-width: 100%;
+            }
+
+            .text-content{
+                text-align: left;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: normal;
+                border: 1px solid #eee;
+                padding: 20px;
+
+                h2{
+
+                    a{
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .author-info{
+                    margin-bottom: 20px;
+
+                    span{
+                        margin-right: 20px;
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
+
+                        i{
+                            margin-right: 3px;
+                        }
+                    }
+                }
+
+                p{
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                }
+
+                a.read-more{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .owl-nav{
+            position: absolute;
+            top: -60px;
+            right: 0;
+
+            button{
+                width: 30px;
+                height: 30px;
+
+                &.owl-prev, &.owl-next{
+                    background-color: $green;
+                    color: $white;
+                    border-radius: 50%;
+                    font-size: 30px;
+                    line-height: 30px;
+                    outline: none;
+
+                    &:hover{
+                        background-color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*********** 9.  Our partners *************/
+.our-partners{
+    padding-top: 0;
+
+    .section-title{
+        color: #333;
+
+        &:after{
+            background: $green;
+        }
+    }
+
+    .carousel-box{
+        margin-top: 60px;
+
+        .item{
+            opacity: 0;
+        }
+    }
+}
+
+
+/************ 10. Footer *******************/
+footer{
+    background-color: #202020;
+    text-align: left;
+    font-size: 14px;
+    line-height: 28px;
+    color: #7f7f7f;
+
+    .item-grid{
+
+        i{
+            color: $green;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        img{
+            max-width: 100%;
+            width: 100px;
+        }
+
+        a{
+            color: #7f7f7f;
+
+            &:hover{
+                color: $green;
+            }
+
+            &.footer__logo {
+                display: inline-block;
+                text-align: center;
+                margin-bottom: 10px;
+
+                img {
+                    margin-top: -20px;
+                    margin-right: 5px;
+                    max-width: 100px;
+                    margin-bottom: 15px;
+
+                    @media only screen and (max-device-width: 1100px) {
+                        max-width: 85px;
+                    }
+
+                    @media only screen and (max-device-width: 380px) {
+                        margin-top: -9px;
+                    }
+                }
+
+                h1 {
+                    color: #007929;
+                    font-size: 16px;
+                    line-height: 14px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: 0;
+
+                    @media only screen and (max-device-width: 1100px) {
+                        font-size: 12px;
+                    }
+
+                    @media only screen and (max-device-width: 380px) {
+                        display: none;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        letter-spacing: 1px;
+
+                        @media only screen and (max-device-width: 1100px) {
+                            font-size: 9px;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul{
+
+            li{
+                margin-bottom: 10px;
             }
         }
     }
