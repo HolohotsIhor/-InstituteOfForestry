@@ -10,6 +10,7 @@
 8.  News-zone
 9.  Our partners
 10. Footer
+11. Scrool to top
 
 */
 
@@ -36,7 +37,8 @@ body {
     font-size: $typography-color-standart;
 }
 
-section, footer {
+section,
+footer {
     padding: $padding-standart;
     text-align: center;
 
@@ -83,6 +85,10 @@ select {
     font-size: 29px;
     letter-spacing: 1px;
     margin-bottom: 0;
+
+    @media only screen and (max-device-width: 545px) {
+        font-size: 23px;
+    }
 
     &:after {
         bottom: -25px;
@@ -160,13 +166,17 @@ header {
                 padding: 19.5px 0 15.5px 0;
             }
 
-            .header__nav{
+            .header__nav {
 
-                ul{
+                ul {
 
-                    li{
+                    li {
 
-                        a:hover ~ ul.sub-menu{
+                        a:hover~ul.sub-menu {
+                            top: 49px;
+                        }
+
+                        .sub-menu:hover {
                             top: 49px;
                         }
                     }
@@ -1170,17 +1180,99 @@ textarea {
 
     .carousel {
 
+        .carousel-control-next, .carousel-control-prev{
+
+            @media only screen and (max-device-width: 767px) {
+                width: 5%;
+            }
+        }
+
         .carousel-inner {
 
             .carousel-item {
+                overflow: hidden;
 
                 img {
                     height: 680px;
                     object-fit: cover;
+
+                    @media only screen and (max-device-width: 767px) {
+                        height: 480px;
+                    }
+
+                    @media only screen and (max-device-width: 540px) {
+                        height: 400px;
+                    }
                 }
-            }
-        }
-    }
+
+                .content-box {
+                    position: absolute;
+                    top: 265px;
+                    color: $white;
+                    width: 100%;
+                    text-align: center;
+
+                    @media only screen and (max-device-width: 767px) {
+                        height: 480px;
+                        top: 200px;
+                    }
+
+                    @media only screen and (max-device-width: 540px) {
+                        top: 160px;
+                    }
+
+                    h5 {
+                        font-weight: 700;
+                        font-size: 48px;
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                        animation-delay: .5s;
+
+                        @media only screen and (max-device-width: 991px) {
+                            font-size: 38px;
+                        }
+
+                        @media only screen and (max-device-width: 767px) {
+                            font-size: 28px;
+                        }
+
+                        @media only screen and (max-device-width: 540px) {
+                            font-size: 22px;
+                        }
+
+                        @media only screen and (max-device-width: 400px) {
+                            font-size: 17px;
+                        }
+                    }
+
+                    p {
+                        width: 620px;
+                        display: inline-block;
+                        margin: 0 auto;
+                        font-size: 15px;
+                        line-height: 26px;
+                        animation-delay: 1s;
+                        max-width: 100%;
+
+                        @media only screen and (max-device-width: 767px) {
+                            width: 480px;
+                            font-size: 14px;
+                        }
+
+                        @media only screen and (max-device-width: 540px) {
+                            width: 90%;
+                        }
+
+                        @media only screen and (max-device-width: 400px) {
+                           line-height: 22px;
+                           font-weight: 300;
+                       }
+                   }
+               }
+           }
+       }
+   }
 }
 
 /* 6.  About works */
@@ -1300,42 +1392,42 @@ textarea {
 }
 
 /********** 8.  News-zone *********/
-.news-zone{
+.news-zone {
 
-    .section-title{
+    .section-title {
         color: #333;
         margin-bottom: 0;
 
-        &:after{
+        &:after {
             background: $green;
         }
     }
 
-    .owl-carousel{
+    .owl-carousel {
 
         margin-top: 70px;
 
-        .owl-dots{
+        .owl-dots {
             display: none;
         }
 
-        .owl-item{
+        .owl-item {
             color: #333;
 
-            a{
+            a {
                 color: #333;
                 transition: .2s;
 
-                &:hover{
+                &:hover {
                     color: $green;
                 }
             }
 
-            img{
+            img {
                 max-width: 100%;
             }
 
-            .text-content{
+            .text-content {
                 text-align: left;
                 font-size: 14px;
                 line-height: 17px;
@@ -1343,9 +1435,9 @@ textarea {
                 border: 1px solid #eee;
                 padding: 20px;
 
-                h2{
+                h2 {
 
-                    a{
+                    a {
                         font-size: 20px;
                         font-weight: 700;
                         line-height: 24px;
@@ -1353,43 +1445,44 @@ textarea {
                     }
                 }
 
-                .author-info{
+                .author-info {
                     margin-bottom: 20px;
 
-                    span{
+                    span {
                         margin-right: 20px;
 
-                        &:last-child{
+                        &:last-child {
                             margin-right: 0;
                         }
 
-                        i{
+                        i {
                             margin-right: 3px;
                         }
                     }
                 }
 
-                p{
+                p {
                     line-height: 28px;
                     margin-bottom: 20px;
                 }
 
-                a.read-more{
+                a.read-more {
                     font-weight: bold;
                 }
             }
         }
 
-        .owl-nav{
+        .owl-nav {
             position: absolute;
             top: -60px;
             right: 0;
 
-            button{
+            button {
                 width: 30px;
                 height: 30px;
 
-                &.owl-prev, &.owl-next{
+                &.owl-prev,
+                &.owl-next {
                     background-color: $green;
                     color: $white;
                     border-radius: 50%;
@@ -1397,7 +1490,7 @@ textarea {
                     line-height: 30px;
                     outline: none;
 
-                    &:hover{
+                    &:hover {
                         background-color: #000;
                     }
                 }
@@ -1407,21 +1500,21 @@ textarea {
 }
 
 /*********** 9.  Our partners *************/
-.our-partners{
+.our-partners {
     padding-top: 0;
 
-    .section-title{
+    .section-title {
         color: #333;
 
-        &:after{
+        &:after {
             background: $green;
         }
     }
 
-    .carousel-box{
+    .carousel-box {
         margin-top: 60px;
 
-        .item{
+        .item {
             opacity: 0;
         }
     }
@@ -1429,30 +1522,63 @@ textarea {
 
 
 /************ 10. Footer *******************/
-footer{
+footer {
     background-color: #202020;
     text-align: left;
     font-size: 14px;
     line-height: 28px;
     color: #7f7f7f;
+    padding-bottom: 0;
 
-    .item-grid{
+    @media only screen and (max-device-width: 767px) {
+        text-align: center;
+    }
 
-        i{
+    .top-bar {
+        padding-bottom: 80px;
+    }
+
+    h4 {
+        font-size: 17px;
+        color: $white;
+        margin-bottom: 30px;
+        font-weight: bold;
+
+        @media only screen and (max-device-width: 767px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    a {
+        color: #7f7f7f;
+        transition: .2s;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    .item-grid {
+
+        @media only screen and (max-device-width: 767px) {
+            margin-bottom: 30px;
+        }
+
+        i {
             color: $green;
             font-size: 18px;
             margin-right: 5px;
         }
 
-        img{
+        img {
             max-width: 100%;
             width: 100px;
         }
 
-        a{
+        a {
             color: #7f7f7f;
 
-            &:hover{
+            &:hover {
                 color: $green;
             }
 
@@ -1504,11 +1630,158 @@ footer{
             }
         }
 
-        ul{
+        ul {
 
-            li{
+            li {
                 margin-bottom: 10px;
             }
         }
+    }
+
+    .bottom-nav-box {
+        text-align: center;
+
+        @media only screen and (max-device-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .search-item {
+
+        .search-box {
+            float: left;
+            margin-right: 15px;
+            position: relative;
+            width: 100%;
+
+            form {
+                width: 100%;
+            }
+
+            input {
+                border-radius: 30px;
+                line-height: 30px;
+                padding-left: 10px;
+                padding-right: 2px;
+                color: $green;
+                background-color: $white;
+                background-image: url(../img/search-tool.png);
+                background-size: 33px;
+                background-position-x: right;
+                background-repeat: no-repeat;
+                transition: .4s;
+                max-width: 100%;
+                width: 60%;
+
+                @media only screen and (max-device-width: 991px) {
+                    width: 80%;
+                }
+
+                @media only screen and (max-device-width: 767px) {
+                    width: 50%;
+                }
+
+                @media only screen and (max-device-width: 545px) {
+                    width: 70%;
+                }
+
+                @media only screen and (max-device-width: 400px) {
+                    width: 80%;
+                }
+
+                &:focus {
+                    background-position-x: -50px;
+                    background-position-y: -100%;
+                    width: 80%;
+
+                    @media only screen and (max-device-width: 991px) {
+                        width: 100%;
+                    }
+
+                    @media only screen and (max-device-width: 767px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .bottom-nav-box {
+            text-align: center;
+        }
+    }
+
+    .bottom-bar {
+        background-color: #2e2e2e;
+        padding: 20px 0;
+        color: $white;
+        text-transform: uppercase;
+
+        a {
+            color: $green;
+        }
+
+        .left-side {
+            text-align: left;
+            letter-spacing: 0;
+
+            @media only screen and (max-device-width: 545px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                text-align: center;
+            }
+        }
+
+        .right-side {
+            text-align: right;
+
+            @media only screen and (max-device-width: 1199px) {
+                padding-right: 80px;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            a {
+                color: $white;
+                transition: .2s;
+                font-size: 20px;
+
+                &:hover {
+                    color: green;
+                }
+            }
+        }
+    }
+}
+
+
+/* 11. Scrool to top */
+.scrollup {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    display: none;
+    background: url('../img/arrow-top.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    text-indent: -9999px;
+    z-index: 99;
+    background-color: #000;
+    background-color: $green;
+    color: $white;
+    border-radius: 50%;
+    transition: .2s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        background-color: #000;
     }
 }

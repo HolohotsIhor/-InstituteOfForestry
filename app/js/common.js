@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     /************** Slider ***************/
     $('.carousel').carousel({
-        interval: 6000
+        interval: 96000
     })
 
     /********** Sticky menu **********/
@@ -94,23 +94,23 @@ $(document).ready(function() {
             }
         });
 
-        // $('.mov-left').each(function() {
-        //     var imagePos = $(this).offset().top;
-        //     var topOfWindow = $(window).scrollTop();
-        //     if (imagePos < topOfWindow + 600) {
-        //         $(this).addClass('fadeInLeft animated');
-        //         $(this).css('opacity', '1');
-        //     }
-        // });
+        $('.mov-left').each(function() {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 600) {
+                $(this).addClass('fadeInLeft animated');
+                $(this).css('opacity', '1');
+            }
+        });
 
-        // $('.mov-right').each(function() {
-        //     var imagePos = $(this).offset().top;
-        //     var topOfWindow = $(window).scrollTop();
-        //     if (imagePos < topOfWindow + 600) {
-        //         $(this).addClass('fadeInRight animated');
-        //         $(this).css('opacity', '1');
-        //     }
-        // });
+        $('.mov-right').each(function() {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 600) {
+                $(this).addClass('fadeInRight animated');
+                $(this).css('opacity', '1');
+            }
+        });
     });
 
     /********************** OWL carousel ***************/
@@ -133,14 +133,6 @@ $(document).ready(function() {
                 items: 3
             }
         }
-    });
-    owl.on('mousewheel', '.owl-stage', function(e) {
-        if (e.deltaY > 0) {
-            owl.trigger('next.owl');
-        } else {
-            owl.trigger('prev.owl');
-        }
-        e.preventDefault();
     });
 
     /////////////////////////
@@ -166,14 +158,31 @@ $(document).ready(function() {
             }
         }
     });
-    owl.on('mousewheel', '.owl-stage', function(e) {
-        if (e.deltaY > 0) {
-            owl.trigger('next.owl');
+
+    //////////// Скролл при наведении мышки
+    // owl.on('mousewheel', '.owl-stage', function(e) {
+    //     if (e.deltaY > 0) {
+    //         owl.trigger('next.owl');
+    //     } else {
+    //         owl.trigger('prev.owl');
+    //     }
+    //     e.preventDefault();
+    // });
+
+    /*********** Scrool to top ************/
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
         } else {
-            owl.trigger('prev.owl');
+            $('.scrollup').fadeOut();
         }
-        e.preventDefault();
     });
 
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
 
 });
