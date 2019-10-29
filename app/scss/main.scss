@@ -11,6 +11,8 @@
 9.  Our partners
 10. Footer
 11. Scrool to top
+12. Breadcrumbs
+13. Work-zone
 
 */
 
@@ -1180,7 +1182,8 @@ textarea {
 
     .carousel {
 
-        .carousel-control-next, .carousel-control-prev{
+        .carousel-control-next,
+        .carousel-control-prev {
 
             @media only screen and (max-device-width: 767px) {
                 width: 5%;
@@ -1207,18 +1210,18 @@ textarea {
 
                 .content-box {
                     position: absolute;
-                    top: 265px;
+                    top: 225px;
                     color: $white;
                     width: 100%;
                     text-align: center;
 
                     @media only screen and (max-device-width: 767px) {
                         height: 480px;
-                        top: 200px;
+                        top: 150px;
                     }
 
                     @media only screen and (max-device-width: 540px) {
-                        top: 160px;
+                        top: 120px;
                     }
 
                     h5 {
@@ -1243,6 +1246,7 @@ textarea {
 
                         @media only screen and (max-device-width: 400px) {
                             font-size: 17px;
+                            margin-bottom: 10px;
                         }
                     }
 
@@ -1265,14 +1269,35 @@ textarea {
                         }
 
                         @media only screen and (max-device-width: 400px) {
-                           line-height: 22px;
-                           font-weight: 300;
-                       }
-                   }
-               }
-           }
-       }
-   }
+                            line-height: 20px;
+                            font-weight: 300;
+                            font-size: 13px;
+                        }
+                    }
+
+                    .btn {
+                        margin-top: 40px;
+                        background-color: $green;
+                        border-radius: 30px;
+                        padding: 15px 40px;
+                        line-height: 17px;
+                        color: $white;
+                        transition: .2s;
+                        opacity: 0;
+                        animation-delay: 1.8s;
+
+                        @media only screen and (max-device-width: 767px) {
+                            margin-top: 20px;
+                        }
+
+                        &:hover {
+                            background: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* 6.  About works */
@@ -1516,6 +1541,20 @@ textarea {
 
         .item {
             opacity: 0;
+            text-align: center;
+
+            img {
+                max-width: 60%;
+                margin: 0 auto;
+
+                @media only screen and (max-device-width: 545px) {
+                    max-width: 80%;
+                }
+
+                @media only screen and (max-device-width: 400px) {
+                    max-width: 90%;
+                }
+            }
         }
     }
 }
@@ -1759,7 +1798,6 @@ footer {
     }
 }
 
-
 /* 11. Scrool to top */
 .scrollup {
     width: 30px;
@@ -1784,4 +1822,72 @@ footer {
     &:hover {
         background-color: #000;
     }
+}
+
+/* 12. Breadcrumbs */
+.breadcrumbs {
+    padding-top: 180px;
+    background: url('../img/breadcrumbs-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    color: $white;
+    letter-spacing: 0;
+    font-size: 14px;
+    background-position-y: -175px;
+    background-position-x: center;
+
+    @media only screen and (max-device-width: 991px) {
+        background-position-y: -65px;
+    }
+
+    @media only screen and (max-device-width: 767px) {
+        padding-top: 145px;
+    }
+
+    a {
+        transition: .2s;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+
+        @media only screen and (max-device-width: 767px) {
+            font-size: 22px;
+        }
+    }
+}
+
+/* 13. Work-zone */
+.work-zone {
+    text-align: center;
+    color: #333;
+
+    .article-name-box {
+
+        h2 {
+            font-size: 29px;
+
+            @media only screen and (max-device-width: 767px) {
+                font-size: 23px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .article-content{
+        margin-top: 50px;
+
+        p {
+            font-size: 14px;
+            color: #3c5561;
+            line-height: 28px;
+        }
+    } 
 }

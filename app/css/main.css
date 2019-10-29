@@ -11,6 +11,8 @@
 9.  Our partners
 10. Footer
 11. Scrool to top
+12. Breadcrumbs
+13. Work-zone
 
 */
 /* 1.  Fonts including */
@@ -968,7 +970,8 @@ textarea {
   background-color: #335a21;
   padding: 0; }
   @media only screen and (max-device-width: 767px) {
-    .slider .carousel .carousel-control-next, .slider .carousel .carousel-control-prev {
+    .slider .carousel .carousel-control-next,
+    .slider .carousel .carousel-control-prev {
       width: 5%; } }
   .slider .carousel .carousel-inner .carousel-item {
     overflow: hidden; }
@@ -984,17 +987,17 @@ textarea {
           height: 400px; } }
     .slider .carousel .carousel-inner .carousel-item .content-box {
       position: absolute;
-      top: 265px;
+      top: 225px;
       color: #fff;
       width: 100%;
       text-align: center; }
       @media only screen and (max-device-width: 767px) {
         .slider .carousel .carousel-inner .carousel-item .content-box {
           height: 480px;
-          top: 200px; } }
+          top: 150px; } }
       @media only screen and (max-device-width: 540px) {
         .slider .carousel .carousel-inner .carousel-item .content-box {
-          top: 160px; } }
+          top: 120px; } }
       .slider .carousel .carousel-inner .carousel-item .content-box h5 {
         font-weight: 700;
         font-size: 48px;
@@ -1014,7 +1017,8 @@ textarea {
             font-size: 22px; } }
         @media only screen and (max-device-width: 400px) {
           .slider .carousel .carousel-inner .carousel-item .content-box h5 {
-            font-size: 17px; } }
+            font-size: 17px;
+            margin-bottom: 10px; } }
       .slider .carousel .carousel-inner .carousel-item .content-box p {
         width: 620px;
         display: inline-block;
@@ -1033,8 +1037,27 @@ textarea {
             width: 90%; } }
         @media only screen and (max-device-width: 400px) {
           .slider .carousel .carousel-inner .carousel-item .content-box p {
-            line-height: 22px;
-            font-weight: 300; } }
+            line-height: 20px;
+            font-weight: 300;
+            font-size: 13px; } }
+      .slider .carousel .carousel-inner .carousel-item .content-box .btn {
+        margin-top: 40px;
+        background-color: #6ab43e;
+        border-radius: 30px;
+        padding: 15px 40px;
+        line-height: 17px;
+        color: #fff;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+        opacity: 0;
+        -webkit-animation-delay: 1.8s;
+                animation-delay: 1.8s; }
+        @media only screen and (max-device-width: 767px) {
+          .slider .carousel .carousel-inner .carousel-item .content-box .btn {
+            margin-top: 20px; } }
+        .slider .carousel .carousel-inner .carousel-item .content-box .btn:hover {
+          background: #000; }
 
 /* 6.  About works */
 .about-works .item-box {
@@ -1192,7 +1215,17 @@ textarea {
   .our-partners .carousel-box {
     margin-top: 60px; }
     .our-partners .carousel-box .item {
-      opacity: 0; }
+      opacity: 0;
+      text-align: center; }
+      .our-partners .carousel-box .item img {
+        max-width: 60%;
+        margin: 0 auto; }
+        @media only screen and (max-device-width: 545px) {
+          .our-partners .carousel-box .item img {
+            max-width: 80%; } }
+        @media only screen and (max-device-width: 400px) {
+          .our-partners .carousel-box .item img {
+            max-width: 90%; } }
 
 /************ 10. Footer *******************/
 footer {
@@ -1384,3 +1417,52 @@ footer {
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
   .scrollup:hover {
     background-color: #000; }
+
+/* 12. Breadcrumbs */
+.breadcrumbs {
+  padding-top: 180px;
+  background: url("../img/breadcrumbs-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  color: #fff;
+  letter-spacing: 0;
+  font-size: 14px;
+  background-position-y: -175px;
+  background-position-x: center; }
+  @media only screen and (max-device-width: 991px) {
+    .breadcrumbs {
+      background-position-y: -65px; } }
+  @media only screen and (max-device-width: 767px) {
+    .breadcrumbs {
+      padding-top: 145px; } }
+  .breadcrumbs a {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+    .breadcrumbs a:hover {
+      color: #6ab43e; }
+  .breadcrumbs h1 {
+    font-size: 25px;
+    text-transform: uppercase; }
+    @media only screen and (max-device-width: 767px) {
+      .breadcrumbs h1 {
+        font-size: 22px; } }
+
+/* 13. Work-zone */
+.work-zone {
+  text-align: center;
+  color: #333; }
+  .work-zone .article-name-box h2 {
+    font-size: 29px; }
+    @media only screen and (max-device-width: 767px) {
+      .work-zone .article-name-box h2 {
+        font-size: 23px;
+        line-height: 28px; } }
+  .work-zone .article-content {
+    margin-top: 50px; }
+    .work-zone .article-content p {
+      font-size: 14px;
+      color: #3c5561;
+      line-height: 28px; }
