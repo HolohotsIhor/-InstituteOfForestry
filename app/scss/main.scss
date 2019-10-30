@@ -348,6 +348,10 @@ header {
                     margin-right: 15px;
                     position: relative;
 
+                    label {
+                        display: none;
+                    }
+
                     input {
                         border-radius: 30px;
                         line-height: 30px;
@@ -366,6 +370,10 @@ header {
                             background-position-x: -50px;
                             background-position-y: -100%;
                             max-width: 200px;
+                        }
+
+                        &:last-child {
+                            display: none;
                         }
                     }
                 }
@@ -494,6 +502,13 @@ header {
                     margin-right: 11px;
                     position: relative;
 
+                    &.current-menu-item {
+
+                        a {
+                            color: $green;
+                        }
+                    }
+
                     &.menu-item-has-children {
 
                         a {
@@ -526,6 +541,7 @@ header {
                         font-weight: 400px;
                         padding-bottom: 32px;
                         cursor: pointer;
+                        line-height: 21px;
 
                         @media only screen and (max-device-width: 1100px) {
                             font-size: 12px;
@@ -554,7 +570,7 @@ header {
                     border-style: solid;
                     border-color: #6ab43e;
                     padding: 10px 0;
-                    min-width: 220px;
+                    min-width: 240px;
                     visibility: hidden;
                     opacity: 0;
                     transition: .4s;
@@ -562,7 +578,9 @@ header {
                     li {
                         display: list-item;
                         padding-left: 30px;
-                        padding-right: 30px;
+                        padding-right: 0;
+                        margin-right: 0;
+                        margin-bottom: 15px;
 
                         a {
                             text-transform: unset;
@@ -816,7 +834,7 @@ header {
     }
 }
 
-/* 4.  Form 
+/* 4.  Form */
 input,
 textarea {
     border-radius: 5px;
@@ -826,10 +844,10 @@ textarea {
     width: 100%;
 }
 
-.breadcrambs{
+.breadcrambs {
     background: url(../img/slider-1.jpg);
 
-    .inner-wrap{
+    .inner-wrap {
         height: 100px;
     }
 
@@ -884,9 +902,8 @@ textarea {
 
 .wpcf7 .wpcf7-form span.wpcf7-form-control-wrap {
     display: block;
-    width: 100%;
+    width: 48%;
     float: left;
-    margin-bottom: 1%;
 }
 
 @media only screen and (max-device-width: 575px) {
@@ -917,6 +934,7 @@ textarea {
     padding: 0.75rem;
     border: solid 1px #eee;
 }
+
 @media only screen and (max-device-width: 575px) {
     .wpcf7 .wpcf7-form p input {
         width: 100%;
@@ -979,11 +997,11 @@ textarea {
     box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
 
-    &:focus{
+    &:focus {
         outline: none;
     }
 
-    &:active{
+    &:active {
         outline: none;
     }
 
@@ -1174,7 +1192,7 @@ textarea {
         line-height: 14px;
     }
 }
-*/
+
 
 
 /* 5.  Slider */
@@ -1699,6 +1717,10 @@ footer {
                 width: 100%;
             }
 
+            label {
+                display: none;
+            }
+
             input {
                 border-radius: 30px;
                 line-height: 30px;
@@ -1742,6 +1764,10 @@ footer {
                     @media only screen and (max-device-width: 767px) {
                         width: 100%;
                     }
+                }
+
+                &:last-child {
+                    display: none;
                 }
             }
         }
@@ -1884,7 +1910,7 @@ footer {
         }
     }
 
-    .article-content{
+    .article-content {
         margin-top: 50px;
 
         p {
@@ -1892,11 +1918,11 @@ footer {
             color: #3c5561;
             line-height: 28px;
         }
-    } 
+    }
 }
 
 /* 14. Breadcrumbs contact */
-.breadcrumbs-contact{
+.breadcrumbs-contact {
     background-color: #f7f7f7;
     color: #333;
     text-align: right;
@@ -1921,7 +1947,7 @@ footer {
 
     a {
         color: #333;
-        transition: .2s;  
+        transition: .2s;
 
         &:hover {
             color: $green;
@@ -1930,83 +1956,117 @@ footer {
 }
 
 /* 15. Work-zone contact */
-.work-zone-contact{
+.work-zone-contact {
 
-    .item-contact{
+    .item-contact {
 
         @media only screen and (max-device-width: 767px) {
             margin-bottom: 25px;
         }
 
-        &:nth-child(2){
+        &:nth-child(2) {
 
-            .item-contact-info-box{
+            .item-contact-info-box {
 
-                i{
-                   font-size: 32px; 
-               }
-           }
-       }
+                i {
+                    font-size: 32px;
+                }
+            }
+        }
 
-       &:nth-child(3){
+        &:nth-child(3) {
 
-        .item-contact-info-box{
+            .item-contact-info-box {
 
-            i{
-               font-size: 30px; 
-           }
-       }
-   }
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
 
-   .item-contact-info-box{
-    padding: 30px 20px 20px 20px;
-    border: 1px solid #eee;
-    line-height: 28px;
+        .item-contact-info-box {
+            padding: 30px 20px 20px 20px;
+            border: 1px solid #eee;
+            line-height: 28px;
 
-    @media only screen and (max-device-width: 991px) {
-        padding: 30px 10px 20px 10px;
-    }
+            @media only screen and (max-device-width: 991px) {
+                padding: 30px 10px 20px 10px;
+            }
 
-    @media only screen and (max-device-width: 767px) {
-        padding: 30px 20px 20px 20px;
-    }
+            @media only screen and (max-device-width: 767px) {
+                padding: 30px 20px 20px 20px;
+            }
 
-    i{
-        font-size: 26px;
-        color: $green;
-        transition: .2s;
-        margin-bottom: 30px;
+            i {
+                font-size: 26px;
+                color: $green;
+                transition: .2s;
+                margin-bottom: 30px;
 
-        &:hover{
-            color: #333;
+                &:hover {
+                    color: #333;
+                }
+            }
+
+            h4 {
+                color: #333;
+                font-size: 20px;
+                text-transform: none;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #3c5561;
+                letter-spacing: 0;
+                min-height: 58px;
+
+                @media only screen and (max-device-width: 991px) {
+                    min-height: 112px;
+                }
+
+                @media only screen and (max-device-width: 991px) {
+                    min-height: auto;
+                }
+
+                a {
+                    color: #3c5561;
+                }
+            }
         }
     }
 
-    h4{
-        color: #333;
-        font-size: 20px;
-        text-transform: none;
-        margin-bottom: 20px;
+    .form-box {
+        margin: 0 auto;
+
+        .wpcf7 {
+
+            .wpcf7-form {
+
+                br {
+                    display: none;
+                }
+
+                p {
+
+                    &:nth-child(2) {
+
+                        .wpcf7-form-control-wrap {
+                        
+                            &:nth-child(2){
+                                margin-right: 4%;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+
+                        .wpcf7-form-control-wrap {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
-
-    p{
-        font-size: 14px;
-        color: #3c5561;
-        letter-spacing: 0;
-        min-height: 58px;
-
-        @media only screen and (max-device-width: 991px) {
-           min-height: 112px;
-        }
-
-        @media only screen and (max-device-width: 991px) {
-           min-height: auto;
-        }
-
-        a{
-           color: #3c5561; 
-       }
-   }
-} 
-}
 }
