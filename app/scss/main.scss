@@ -13,6 +13,8 @@
 11. Scrool to top
 12. Breadcrumbs
 13. Work-zone
+14. Breadcrumbs contact
+15. Work-zone contact
 
 */
 
@@ -1844,6 +1846,7 @@ footer {
 
     @media only screen and (max-device-width: 767px) {
         padding-top: 145px;
+        letter-spacing: 0;
     }
 
     a {
@@ -1890,4 +1893,120 @@ footer {
             line-height: 28px;
         }
     } 
+}
+
+/* 14. Breadcrumbs contact */
+.breadcrumbs-contact{
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: right;
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    @media only screen and (max-device-width: 767px) {
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-transform: uppercase;
+        float: left;
+        font-weight: 300;
+
+        @media only screen and (max-device-width: 767px) {
+            font-size: 22px;
+        }
+    }
+
+    a {
+        color: #333;
+        transition: .2s;  
+
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+/* 15. Work-zone contact */
+.work-zone-contact{
+
+    .item-contact{
+
+        @media only screen and (max-device-width: 767px) {
+            margin-bottom: 25px;
+        }
+
+        &:nth-child(2){
+
+            .item-contact-info-box{
+
+                i{
+                   font-size: 32px; 
+               }
+           }
+       }
+
+       &:nth-child(3){
+
+        .item-contact-info-box{
+
+            i{
+               font-size: 30px; 
+           }
+       }
+   }
+
+   .item-contact-info-box{
+    padding: 30px 20px 20px 20px;
+    border: 1px solid #eee;
+    line-height: 28px;
+
+    @media only screen and (max-device-width: 991px) {
+        padding: 30px 10px 20px 10px;
+    }
+
+    @media only screen and (max-device-width: 767px) {
+        padding: 30px 20px 20px 20px;
+    }
+
+    i{
+        font-size: 26px;
+        color: $green;
+        transition: .2s;
+        margin-bottom: 30px;
+
+        &:hover{
+            color: #333;
+        }
+    }
+
+    h4{
+        color: #333;
+        font-size: 20px;
+        text-transform: none;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 14px;
+        color: #3c5561;
+        letter-spacing: 0;
+        min-height: 58px;
+
+        @media only screen and (max-device-width: 991px) {
+           min-height: 112px;
+        }
+
+        @media only screen and (max-device-width: 991px) {
+           min-height: auto;
+        }
+
+        a{
+           color: #3c5561; 
+       }
+   }
+} 
+}
 }

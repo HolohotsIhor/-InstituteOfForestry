@@ -13,6 +13,8 @@
 11. Scrool to top
 12. Breadcrumbs
 13. Work-zone
+14. Breadcrumbs contact
+15. Work-zone contact
 
 */
 /* 1.  Fonts including */
@@ -1436,7 +1438,8 @@ footer {
       background-position-y: -65px; } }
   @media only screen and (max-device-width: 767px) {
     .breadcrumbs {
-      padding-top: 145px; } }
+      padding-top: 145px;
+      letter-spacing: 0; } }
   .breadcrumbs a {
     -webkit-transition: .2s;
     -o-transition: .2s;
@@ -1466,3 +1469,79 @@ footer {
       font-size: 14px;
       color: #3c5561;
       line-height: 28px; }
+
+/* 14. Breadcrumbs contact */
+.breadcrumbs-contact {
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: right;
+  padding-top: 120px;
+  padding-bottom: 40px; }
+  @media only screen and (max-device-width: 767px) {
+    .breadcrumbs-contact {
+      text-align: center;
+      letter-spacing: 0; } }
+  .breadcrumbs-contact h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    float: left;
+    font-weight: 300; }
+    @media only screen and (max-device-width: 767px) {
+      .breadcrumbs-contact h1 {
+        font-size: 22px; } }
+  .breadcrumbs-contact a {
+    color: #333;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+    .breadcrumbs-contact a:hover {
+      color: #6ab43e; }
+
+/* 15. Work-zone contact */
+@media only screen and (max-device-width: 767px) {
+  .work-zone-contact .item-contact {
+    margin-bottom: 25px; } }
+
+.work-zone-contact .item-contact:nth-child(2) .item-contact-info-box i {
+  font-size: 32px; }
+
+.work-zone-contact .item-contact:nth-child(3) .item-contact-info-box i {
+  font-size: 30px; }
+
+.work-zone-contact .item-contact .item-contact-info-box {
+  padding: 30px 20px 20px 20px;
+  border: 1px solid #eee;
+  line-height: 28px; }
+  @media only screen and (max-device-width: 991px) {
+    .work-zone-contact .item-contact .item-contact-info-box {
+      padding: 30px 10px 20px 10px; } }
+  @media only screen and (max-device-width: 767px) {
+    .work-zone-contact .item-contact .item-contact-info-box {
+      padding: 30px 20px 20px 20px; } }
+  .work-zone-contact .item-contact .item-contact-info-box i {
+    font-size: 26px;
+    color: #6ab43e;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    margin-bottom: 30px; }
+    .work-zone-contact .item-contact .item-contact-info-box i:hover {
+      color: #333; }
+  .work-zone-contact .item-contact .item-contact-info-box h4 {
+    color: #333;
+    font-size: 20px;
+    text-transform: none;
+    margin-bottom: 20px; }
+  .work-zone-contact .item-contact .item-contact-info-box p {
+    font-size: 14px;
+    color: #3c5561;
+    letter-spacing: 0;
+    min-height: 58px; }
+    @media only screen and (max-device-width: 991px) {
+      .work-zone-contact .item-contact .item-contact-info-box p {
+        min-height: 112px; } }
+    @media only screen and (max-device-width: 991px) {
+      .work-zone-contact .item-contact .item-contact-info-box p {
+        min-height: auto; } }
+    .work-zone-contact .item-contact .item-contact-info-box p a {
+      color: #3c5561; }
