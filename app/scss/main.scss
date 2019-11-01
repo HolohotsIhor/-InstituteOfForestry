@@ -15,6 +15,8 @@
 13. Work-zone
 14. Breadcrumbs contact
 15. Work-zone contact
+16. Map-box
+17. Accordion
 
 */
 
@@ -89,6 +91,7 @@ select {
     font-size: 29px;
     letter-spacing: 1px;
     margin-bottom: 0;
+    letter-spacing: 0;
 
     @media only screen and (max-device-width: 545px) {
         font-size: 23px;
@@ -254,6 +257,10 @@ header {
                 form {
                     vertical-align: top;
 
+                    label{
+                        display: none;
+                    }
+
                     input {
                         background: transparent;
                         border-bottom: solid 1px $white;
@@ -270,6 +277,10 @@ header {
 
                         &::placeholder {
                             font-size: 20px;
+                        }
+
+                        &:nth-child(3){
+                            display: none;
                         }
                     }
                 }
@@ -504,7 +515,7 @@ header {
 
                     &.current-menu-item {
 
-                        a {
+                        > a {
                             color: $green;
                         }
                     }
@@ -541,7 +552,6 @@ header {
                         font-weight: 400px;
                         padding-bottom: 32px;
                         cursor: pointer;
-                        line-height: 21px;
 
                         @media only screen and (max-device-width: 1100px) {
                             font-size: 12px;
@@ -569,7 +579,7 @@ header {
                     border-right-width: 0px;
                     border-style: solid;
                     border-color: #6ab43e;
-                    padding: 10px 0;
+                    padding: 25px 0 10px 0;
                     min-width: 240px;
                     visibility: hidden;
                     opacity: 0;
@@ -584,6 +594,7 @@ header {
 
                         a {
                             text-transform: unset;
+                            line-height: 21px;
 
                             &:after {
                                 content: "";
@@ -930,7 +941,6 @@ textarea {
 
 .wpcf7 .wpcf7-form p input {
     width: 100%;
-    float: left;
     padding: 0.75rem;
     border: solid 1px #eee;
 }
@@ -983,19 +993,19 @@ textarea {
 }
 
 .wpcf7 .wpcf7-form p .wpcf7-submit {
-    display: block;
-    height: 60px;
-    width: 230px;
-    background-color: $white;
-    border: none;
-    color: $blue;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
+    width: 150px;
+    float: left;
     cursor: pointer;
-    border-radius: 30px;
-    box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    background-color: $green;
+    border: 0;
+    color: $white;
+    transition: .2s;
+    padding: 8px 30px;
+
+    &:hover {
+        background-color: #000;
+    }
 
     &:focus {
         outline: none;
@@ -1276,7 +1286,7 @@ textarea {
                         margin: 0 auto;
                         font-size: 15px;
                         line-height: 26px;
-                        animation-delay: 1s;
+                        animation-delay: .8s;
                         max-width: 100%;
 
                         @media only screen and (max-device-width: 767px) {
@@ -1304,7 +1314,7 @@ textarea {
                         color: $white;
                         transition: .2s;
                         opacity: 0;
-                        animation-delay: 1.8s;
+                        animation-delay: 1.3s;
 
                         @media only screen and (max-device-width: 767px) {
                             margin-top: 20px;
@@ -1332,18 +1342,34 @@ textarea {
 
         &:nth-child(1) {
             animation-delay: .1s;
+
+            @media only screen and (max-device-width: 767px) {
+                animation-delay: 0;
+            }
         }
 
         &:nth-child(2) {
             animation-delay: .2s;
+
+            @media only screen and (max-device-width: 767px) {
+                animation-delay: 0;
+            }
         }
 
         &:nth-child(3) {
             animation-delay: .3s;
+
+            @media only screen and (max-device-width: 767px) {
+                animation-delay: 0;
+            }
         }
 
         &:nth-child(4) {
             animation-delay: .4s;
+
+            @media only screen and (max-device-width: 767px) {
+                animation-delay: 0;
+            }
         }
 
         img {
@@ -1898,27 +1924,91 @@ footer {
     text-align: center;
     color: #333;
 
-    .article-name-box {
+    .section-title{
+     margin-bottom: 45px;
 
-        h2 {
-            font-size: 29px;
-
-            @media only screen and (max-device-width: 767px) {
-                font-size: 23px;
-                line-height: 28px;
-            }
-        }
+     &:after{
+        position: relative;
     }
+}
 
-    .article-content {
-        margin-top: 50px;
+.article-name-box {
 
-        p {
-            font-size: 14px;
-            color: #3c5561;
+    h2 {
+        font-size: 29px;
+
+        @media only screen and (max-device-width: 767px) {
+            font-size: 23px;
             line-height: 28px;
         }
     }
+}
+
+.left-nav{
+    text-align: left;
+    @media only screen and (max-device-width: 991px) {
+        display: none;
+    }
+
+    ul{
+
+        li{
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: block;
+            background-color: $white;
+            transition: .2s;
+            margin-bottom: 5px;
+            position: relative;
+
+            &:hover{
+                background-color: $green;
+
+                a{
+                    color: $white;
+                }
+            }
+
+            &.current-menu-item{
+                background-color: $green;
+
+                a{
+                    color: $white;
+                }
+            }
+
+            a{  
+                padding: 10px 13px 10px 45px;
+                color: #7f7f7f;
+                font-size: 14px;
+                line-height: 26px;
+                display: block;
+                letter-spacing: 0;
+
+                &:before{
+                    position: absolute;
+                    left: 15px;
+                    top: 17px;
+                    content: "\f06c";
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+            }
+        }
+    }
+}
+
+.article-content {
+
+    p {
+        font-size: 14px;
+        color: #3c5561;
+        line-height: 28px;
+    }
+}
 }
 
 /* 14. Breadcrumbs contact */
@@ -1958,114 +2048,242 @@ footer {
 /* 15. Work-zone contact */
 .work-zone-contact {
 
-    .item-contact {
+    .section-title {
+        font-size: 29px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        color: #333;
+        margin-top: 100px;
 
         @media only screen and (max-device-width: 767px) {
-            margin-bottom: 25px;
+         margin-top: 40px;
+     }
+
+     @media only screen and (max-device-width: 545px) {
+        font-size: 23px;
+    }
+}
+
+.item-contact {
+
+
+    @media only screen and (max-device-width: 767px) {
+        margin-bottom: 25px;
+    }
+
+    .item-contact-info-box {
+        padding: 30px 20px 20px 20px;
+        border: 1px solid #eee;
+        line-height: 28px;
+        transition: .2s;
+
+        @media only screen and (max-device-width: 991px) {
+            padding: 30px 10px 20px 10px;
         }
 
-        &:nth-child(2) {
-
-            .item-contact-info-box {
-
-                i {
-                    font-size: 32px;
-                }
-            }
-        }
-
-        &:nth-child(3) {
-
-            .item-contact-info-box {
-
-                i {
-                    font-size: 30px;
-                }
-            }
-        }
-
-        .item-contact-info-box {
+        @media only screen and (max-device-width: 767px) {
             padding: 30px 20px 20px 20px;
-            border: 1px solid #eee;
-            line-height: 28px;
+        }
+
+        &:hover{
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+
+        i {
+            font-size: 26px;
+            color: $green;
+            transition: .2s;
+            margin-bottom: 30px;
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+        h4 {
+            color: #333;
+            font-size: 20px;
+            text-transform: none;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #3c5561;
+            letter-spacing: 0;
+            min-height: 58px;
 
             @media only screen and (max-device-width: 991px) {
-                padding: 30px 10px 20px 10px;
+                min-height: 112px;
             }
 
             @media only screen and (max-device-width: 767px) {
-                padding: 30px 20px 20px 20px;
+                min-height: auto;
             }
 
-            i {
-                font-size: 26px;
-                color: $green;
-                transition: .2s;
-                margin-bottom: 30px;
-
-                &:hover {
-                    color: #333;
-                }
-            }
-
-            h4 {
-                color: #333;
-                font-size: 20px;
-                text-transform: none;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 14px;
+            a {
                 color: #3c5561;
-                letter-spacing: 0;
-                min-height: 58px;
+            }
+        }
+    }
+}
 
-                @media only screen and (max-device-width: 991px) {
-                    min-height: 112px;
+.form-box {
+    margin: 0 auto;
+    margin-top: 70px;
+
+    p{
+        font-size: 14px;
+    }
+
+    .wpcf7 {
+        margin-top: 40px;
+
+        .wpcf7-not-valid-tip{
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .wpcf7-mail-sent-ok{
+            font-size: 12px;
+            font-weight: bold;
+            border: 0;
+            color: $green;
+        }
+
+        .form-line {
+            margin-bottom: 10px;
+
+            br {
+                display: none;
+            }
+
+            .wpcf7-form-control-wrap {
+                margin-bottom: 20px;
+
+                &:nth-child(2) {
+                    margin-right: 4%;
                 }
 
-                @media only screen and (max-device-width: 991px) {
-                    min-height: auto;
-                }
-
-                a {
+                input {
+                    width: 100%;
+                    background: $white;
+                    -webkit-border-radius: 3px;
+                    font-weight: normal;
+                    padding-left: 10px;
+                    height: 40px;
+                    width: 100%;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+                    border: 0;
+                    font-size: 14px;
                     color: #3c5561;
+                }
+            }
+
+            &:nth-child(5) {
+                width: 100%;
+
+                .wpcf7-form-control-wrap {
+                    margin-right: 0;
+                    width: 100%;
+
+                    textarea {
+                        width: 100%;
+                        margin-top: 0;
+                        background: $white;
+                        -webkit-border-radius: 3px;
+                        font-weight: normal;
+                        padding-left: 10px;
+                        height: 40px;
+                        width: 100%;
+                        padding-top: 6px;
+                        padding-bottom: 6px;
+                        box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+                        border: 0;
+                        font-size: 14px;
+                        color: #3c5561;
+                        height: 100px;
+                        border: 1px solid #e1e1e1;
+                    }
                 }
             }
         }
     }
+}
+}
 
-    .form-box {
-        margin: 0 auto;
+/************ 16. Map-box ************/
+.map-box{
+    padding: 0;
+}
 
-        .wpcf7 {
+/************ 17. Accordion **********/
+.accordion{
+    background-color: #f8f8f8;
+    font-size: 14px;
 
-            .wpcf7-form {
+    .card{
+        border-radius: 0;
 
-                br {
-                    display: none;
-                }
+        .card-header{
+            padding: 0;
+            
+            background-color: #f8f8f8;
 
-                p {
+            h2{
+                font-size: 16px;
+                line-height: 16px;
+                text-align: left;
 
-                    &:nth-child(2) {
+                button{ 
+                    background-color: #333;
+                    width: 100%;
+                    color: $white;
+                    font-weight: 600;
+                    text-align: left;
+                    border-radius: 0;
+                    padding: 10px 0 8px 40px;
 
-                        .wpcf7-form-control-wrap {
-                        
-                            &:nth-child(2){
-                                margin-right: 4%;
-                            }
+                    &:before{
+                        position: absolute;
+                        left: 15px;
+                        top: 4px;
+                        display: inline-block;
+                        content: "<";
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: $green;
+                        transform: rotate(90deg);
+                    }
+                    
+                    &.collapsed{
+                        background-color: #f8f8f8;
+                        color: #666;
+
+                        &:before{
+                            color: #666;
+                            transform: rotate(-90deg);
+                            top: 5px;
                         }
                     }
 
-                    &:nth-child(3) {
-
-                        .wpcf7-form-control-wrap {
-                            width: 100%;
-                        }
+                    &:hover, &:focus, &:active{
+                        text-decoration: none;
                     }
                 }
+            }
+        }
+
+        .collapse{
+
+            .card-body{
+                background-color: #f8f8f8;
+                font-size: 14px;
+                color: #000;
+                line-height: 28px;
             }
         }
     }
