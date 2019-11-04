@@ -159,6 +159,30 @@ $(document).ready(function() {
         }
     });
 
+    /////////////////////////
+    var owl = $('.carousel-three');
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 5200,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 3
+            },
+            600: {
+                items: 3
+            },
+            960: {
+                items: 6
+            },
+            1200: {
+                items: 6
+            }
+        }
+    });
+
     //////////// Скролл при наведении мышки
     // owl.on('mousewheel', '.owl-stage', function(e) {
     //     if (e.deltaY > 0) {

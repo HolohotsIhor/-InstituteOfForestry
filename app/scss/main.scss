@@ -455,8 +455,8 @@ header {
                 }
 
                 h1 {
-                    color: #2b2b2b;
-                    font-size: 16px;
+                    color: #007929;
+                    font-size: 13px;
                     display: inline-block;
                     line-height: 14px;
                     text-transform: uppercase;
@@ -469,15 +469,6 @@ header {
 
                     @media only screen and (max-device-width: 380px) {
                         display: none;
-                    }
-
-                    span {
-                        font-size: 12px;
-                        letter-spacing: 1px;
-
-                        @media only screen and (max-device-width: 1100px) {
-                            font-size: 9px;
-                        }
                     }
                 }
             }
@@ -1382,45 +1373,59 @@ textarea {
 
         h3 {
             color: #333;
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 20px;
 
-            @media only screen and (max-device-width: 767px) {
-                margin-bottom: 15px;
-            }
+            @media only screen and (max-device-width: 1199px) {
+               font-size: 16px;
+               margin-bottom: 10px;
+           }
+
+           @media only screen and (max-device-width: 991px) {
+               font-size: 20px;
+               margin-bottom: 15px;
+           }
+       }
+
+       p {
+        color: #3c5561;
+        line-height: 29px;
+        font-size: 14px;
+        margin-bottom: 40px;
+
+        @media only screen and (max-device-width: 1050px) {
+            font-size: 13px;
         }
 
-        p {
-            color: #3c5561;
-            line-height: 29px;
+        @media only screen and (max-device-width: 991px) {
             font-size: 14px;
-            margin-bottom: 40px;
-
-            @media only screen and (max-device-width: 767px) {
-                margin-bottom: 30px;
-            }
         }
 
-        .grid-button {
+        @media only screen and (max-device-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
 
-            a {
-                background-color: $green;
-                font-size: 14px;
-                font-weight: 400;
-                outline: none;
-                padding: 10px 22px 10px 22px;
-                text-transform: uppercase;
-                color: $white;
-                border-radius: 4px;
-                cursor: pointer;
-                transition: .3s;
+    .grid-button {
 
-                &:hover {
-                    background-color: #000;
-                }
+        a {
+            background-color: $green;
+            font-size: 14px;
+            font-weight: 400;
+            outline: none;
+            padding: 10px 22px 10px 22px;
+            text-transform: uppercase;
+            color: $white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                background-color: #000;
             }
         }
     }
+}
 }
 
 
@@ -1669,7 +1674,7 @@ footer {
 
             &.footer__logo {
                 display: inline-block;
-                text-align: center;
+                text-align: left;
                 margin-bottom: 10px;
 
                 img {
@@ -1689,10 +1694,10 @@ footer {
 
                 h1 {
                     color: #007929;
-                    font-size: 16px;
-                    line-height: 14px;
+                    font-size: 15px;
+                    line-height: 17px;
                     text-transform: uppercase;
-                    text-align: center;
+                    text-align: left;
                     letter-spacing: 0;
 
                     @media only screen and (max-device-width: 1100px) {
@@ -1702,15 +1707,6 @@ footer {
                     @media only screen and (max-device-width: 380px) {
                         display: none;
                     }
-
-                    span {
-                        font-size: 12px;
-                        letter-spacing: 1px;
-
-                        @media only screen and (max-device-width: 1100px) {
-                            font-size: 9px;
-                        }
-                    }
                 }
             }
         }
@@ -1719,6 +1715,8 @@ footer {
 
             li {
                 margin-bottom: 10px;
+                letter-spacing: 0;
+                line-height: 18px;
             }
         }
     }
@@ -1811,11 +1809,14 @@ footer {
 
         a {
             color: $green;
+            line-height: 24px;
         }
 
         .left-side {
             text-align: left;
             letter-spacing: 0;
+            font-size: 12px;
+            line-height: 15px;
 
             @media only screen and (max-device-width: 545px) {
                 font-size: 12px;
@@ -1946,6 +1947,12 @@ footer {
 
 .left-nav{
     text-align: left;
+    padding-top: 82px;
+
+    @media only screen and (max-device-width: 1199px) {
+        padding-top: 90px;
+    }
+
     @media only screen and (max-device-width: 991px) {
         display: none;
     }
@@ -2047,6 +2054,25 @@ footer {
 
 /* 15. Work-zone contact */
 .work-zone-contact {
+
+    .site-name{
+
+        h2{
+            font-size: 29px;
+            color: #333;
+            margin-bottom: 30px;
+
+            @media only screen and (max-device-width: 991px) {
+                margin-bottom: 20px;
+                font-size: 19px;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+    }
 
     .section-title {
         font-size: 29px;
@@ -2180,6 +2206,28 @@ footer {
                     border: 0;
                     font-size: 14px;
                     color: #3c5561;
+
+                    &.wpcf7-file{
+                        box-shadow: none;
+                    }
+                }
+
+                .wpcf7-checkbox{
+
+                    .wpcf7-list-item-label{
+                        width: auto;
+                        font-size: 10px;
+                        line-height: 14px;
+                        width: 90%;
+                        display: inline-block;
+                    }
+
+                    input{
+                        box-shadow: none;
+                        width: auto;
+                        float: left;
+                        margin-right: 10px;
+                    }
                 }
             }
 
