@@ -17,6 +17,7 @@
 15. Work-zone contact
 16. Map-box
 17. Accordion
+18. Pagination
 
 */
 /* 1.  Fonts including */
@@ -1263,57 +1264,62 @@ footer {
     @media only screen and (max-device-width: 767px) {
       footer .bottom-nav-box {
         margin-bottom: 30px; } }
-  footer .search-item .search-box {
-    float: left;
-    margin-right: 15px;
-    position: relative;
-    width: 100%; }
-    footer .search-item .search-box form {
+  footer .search-item {
+    text-align: right; }
+    @media only screen and (max-device-width: 991px) {
+      footer .search-item {
+        text-align: center; } }
+    footer .search-item .search-box {
+      float: left;
+      margin-right: 15px;
+      position: relative;
       width: 100%; }
-    footer .search-item .search-box label {
-      display: none; }
-    footer .search-item .search-box input {
-      border-radius: 30px;
-      line-height: 30px;
-      padding-left: 10px;
-      padding-right: 2px;
-      color: #6ab43e;
-      background-color: #fff;
-      background-image: url(../img/search-tool.png);
-      background-size: 33px;
-      background-position-x: right;
-      background-repeat: no-repeat;
-      -webkit-transition: .4s;
-      -o-transition: .4s;
-      transition: .4s;
-      max-width: 100%;
-      width: 60%; }
-      @media only screen and (max-device-width: 991px) {
-        footer .search-item .search-box input {
-          width: 80%; } }
-      @media only screen and (max-device-width: 767px) {
-        footer .search-item .search-box input {
-          width: 50%; } }
-      @media only screen and (max-device-width: 545px) {
-        footer .search-item .search-box input {
-          width: 70%; } }
-      @media only screen and (max-device-width: 400px) {
-        footer .search-item .search-box input {
-          width: 80%; } }
-      footer .search-item .search-box input:focus {
-        background-position-x: -50px;
-        background-position-y: -100%;
-        width: 80%; }
-        @media only screen and (max-device-width: 991px) {
-          footer .search-item .search-box input:focus {
-            width: 100%; } }
-        @media only screen and (max-device-width: 767px) {
-          footer .search-item .search-box input:focus {
-            width: 100%; } }
-      footer .search-item .search-box input:last-child {
+      footer .search-item .search-box form {
+        width: 100%; }
+      footer .search-item .search-box label {
         display: none; }
-  footer .search-item .bottom-nav-box {
-    text-align: center; }
+      footer .search-item .search-box input {
+        border-radius: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        padding-right: 2px;
+        color: #6ab43e;
+        background-color: #fff;
+        background-image: url(../img/search-tool.png);
+        background-size: 33px;
+        background-position-x: right;
+        background-repeat: no-repeat;
+        -webkit-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+        max-width: 100%;
+        width: 60%; }
+        @media only screen and (max-device-width: 991px) {
+          footer .search-item .search-box input {
+            width: 80%; } }
+        @media only screen and (max-device-width: 767px) {
+          footer .search-item .search-box input {
+            width: 50%; } }
+        @media only screen and (max-device-width: 545px) {
+          footer .search-item .search-box input {
+            width: 70%; } }
+        @media only screen and (max-device-width: 400px) {
+          footer .search-item .search-box input {
+            width: 80%; } }
+        footer .search-item .search-box input:focus {
+          background-position-x: -50px;
+          background-position-y: -100%;
+          width: 80%; }
+          @media only screen and (max-device-width: 991px) {
+            footer .search-item .search-box input:focus {
+              width: 100%; } }
+          @media only screen and (max-device-width: 767px) {
+            footer .search-item .search-box input:focus {
+              width: 100%; } }
+        footer .search-item .search-box input:last-child {
+          display: none; }
+    footer .search-item .bottom-nav-box {
+      text-align: center; }
   footer .bottom-bar {
     background-color: #2e2e2e;
     padding: 20px 0;
@@ -1415,6 +1421,62 @@ footer {
 .work-zone {
   text-align: center;
   color: #333; }
+  .work-zone p {
+    text-align: left; }
+    .work-zone p a {
+      color: #6ab43e; }
+  .work-zone img {
+    max-width: 100%; }
+    .work-zone img.alignleft {
+      width: 200px;
+      height: 174px;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      -o-object-fit: cover;
+         object-fit: cover; }
+      @media only screen and (max-device-width: 545px) {
+        .work-zone img.alignleft {
+          width: 280px;
+          float: unset;
+          display: block;
+          margin: 0 auto; } }
+  .work-zone .wp-block-table {
+    text-align: left; }
+  .work-zone .wp-block-file {
+    text-align: left; }
+    .work-zone .wp-block-file a {
+      color: #6ab43e; }
+      .work-zone .wp-block-file a.wp-block-file__button {
+        color: #fff; }
+  .work-zone .article-content .post-box {
+    border-bottom: solid 1px #f0f0f0;
+    margin-bottom: 20px;
+    padding-bottom: 10px; }
+    @media only screen and (max-device-width: 545px) {
+      .work-zone .article-content .post-box {
+        text-align: center; } }
+    .work-zone .article-content .post-box:last-child {
+      margin-bottom: 0; }
+    .work-zone .article-content .post-box h3 {
+      text-align: left;
+      margin-bottom: 10px;
+      line-height: 20px;
+      margin-top: 10px; }
+      @media only screen and (max-device-width: 545px) {
+        .work-zone .article-content .post-box h3 {
+          text-align: center; } }
+      .work-zone .article-content .post-box h3 a {
+        color: #333;
+        font-size: 20px; }
+    .work-zone .article-content .post-box .more-link {
+      float: left; }
+      @media only screen and (max-device-width: 545px) {
+        .work-zone .article-content .post-box .more-link {
+          text-align: center; } }
+      .work-zone .article-content .post-box .more-link span {
+        color: #6ab43e; }
   .work-zone .section-title {
     margin-bottom: 45px; }
     .work-zone .section-title:after {
@@ -1677,7 +1739,8 @@ footer {
           font-weight: 600;
           text-align: left;
           border-radius: 0;
-          padding: 10px 0 8px 40px; }
+          padding: 10px 0 8px 40px;
+          white-space: unset; }
           .accordion .card .card-header h2 button:before {
             position: absolute;
             left: 15px;
@@ -1706,3 +1769,37 @@ footer {
       font-size: 14px;
       color: #000;
       line-height: 28px; }
+      @media only screen and (max-device-width: 767px) {
+        .accordion .card .collapse .card-body {
+          padding: 5px; } }
+      .accordion .card .collapse .card-body table {
+        width: 100%;
+        margin-top: 20px; }
+        .accordion .card .collapse .card-body table tr td {
+          width: 33%;
+          border: solid 1px #ccc;
+          line-height: 20px;
+          font-size: 14px;
+          padding: 10px; }
+          @media only screen and (max-device-width: 767px) {
+            .accordion .card .collapse .card-body table tr td {
+              line-height: 18px;
+              font-size: 12px;
+              padding: 5px; } }
+
+/* 18. Pagination */
+.wp-pagenavi span {
+  border: 0 !important;
+  color: #6ab43e;
+  font-size: 12px;
+  letter-spacing: 0; }
+  .wp-pagenavi span.current {
+    color: #333;
+    margin-left: 10px; }
+
+.wp-pagenavi a {
+  border: 0 !important;
+  color: #6ab43e;
+  font-size: 12px;
+  letter-spacing: 0;
+  padding: 3px 0px !important; }
