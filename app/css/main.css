@@ -18,6 +18,7 @@
 16. Map-box
 17. Accordion
 18. Pagination
+19. Gallery
 
 */
 /* 1.  Fonts including */
@@ -1795,11 +1796,54 @@ footer {
   letter-spacing: 0; }
   .wp-pagenavi span.current {
     color: #333;
-    margin-left: 10px; }
+    padding: 3px 2px !important; }
+  .wp-pagenavi span.pages {
+    margin-right: 5px; }
 
 .wp-pagenavi a {
   border: 0 !important;
   color: #6ab43e;
   font-size: 12px;
   letter-spacing: 0;
-  padding: 3px 0px !important; }
+  padding: 3px 2px !important; }
+
+/* 19. Gallery */
+.gallery-wrapper ul.gallery-filter li {
+  margin-right: 10px;
+  background-color: #202020;
+  display: inline-block;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  position: relative;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .gallery-wrapper ul.gallery-filter li:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    background-color: #6ab43e; }
+  .gallery-wrapper ul.gallery-filter li:last-child {
+    margin-right: 0; }
+  .gallery-wrapper ul.gallery-filter li.active {
+    background-color: #6ab43e;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+    .gallery-wrapper ul.gallery-filter li.active:after {
+      position: absolute;
+      content: "";
+      right: 40%;
+      bottom: -5px;
+      width: 10px;
+      height: 10px;
+      z-index: 0;
+      background-color: #6ab43e;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+  .gallery-wrapper ul.gallery-filter li a {
+    font-size: 14px;
+    line-height: 36px;
+    color: #fff;
+    letter-spacing: 0;
+    padding: 8px 10px; }
