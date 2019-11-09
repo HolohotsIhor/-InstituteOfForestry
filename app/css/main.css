@@ -377,8 +377,10 @@ header {
           color: #6ab43e; }
         header .bottom-bar .header__nav ul li:hover a ~ ul.sub-menu li a {
           color: #2b2b2b; }
-        header .bottom-bar .header__nav ul li.current-menu-item > a {
+        header .bottom-bar .header__nav ul li.current-menu-parent a {
           color: #6ab43e; }
+        header .bottom-bar .header__nav ul li.current-menu-item > a {
+          color: #6ab43e !important; }
         header .bottom-bar .header__nav ul li.menu-item-has-children a:after {
           content: "\f107";
           font-family: fontawesome;
@@ -1131,7 +1133,10 @@ textarea {
       .news-zone .owl-carousel .owl-item a:hover {
         color: #6ab43e; }
     .news-zone .owl-carousel .owl-item img {
-      max-width: 100%; }
+      max-width: 100%;
+      max-height: 255px;
+      -o-object-fit: cover;
+         object-fit: cover; }
     .news-zone .owl-carousel .owl-item .text-content {
       text-align: left;
       font-size: 14px;
@@ -1730,56 +1735,141 @@ footer {
 .map-box {
   padding: 0; }
 
+/************ 17. Accordion Old
+.accordion {
+    background-color: #f8f8f8;
+    font-size: 14px;
+
+    .card {
+        border-radius: 0;
+
+        .card-header {
+            padding: 0;
+
+            background-color: #f8f8f8;
+
+            h2 {
+                font-size: 16px;
+                line-height: 16px;
+                text-align: left;
+
+                button {
+                    background-color: #333;
+                    width: 100%;
+                    color: $white;
+                    font-weight: 600;
+                    text-align: left;
+                    border-radius: 0;
+                    padding: 10px 0 8px 40px;
+                    white-space: unset;
+
+                    &:before {
+                        position: absolute;
+                        left: 15px;
+                        top: 4px;
+                        display: inline-block;
+                        content: "<";
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: $green;
+                        transform: rotate(90deg);
+                    }
+
+                    &.collapsed {
+                        background-color: #f8f8f8;
+                        color: #666;
+
+                        &:before {
+                            color: #666;
+                            transform: rotate(-90deg);
+                            top: 5px;
+                        }
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .collapse {
+
+            .card-body {
+                background-color: #f8f8f8;
+                font-size: 14px;
+                color: #000;
+                line-height: 28px;
+
+                @media only screen and (max-device-width: 767px) {
+                    padding: 5px;
+                }
+
+                table{
+                    width: 100%;
+                    margin-top: 20px;
+
+                    tr{
+
+                        td{
+                            width: 33%;
+                            border: solid 1px #ccc;
+                            line-height: 20px;
+                            font-size: 14px;
+                            padding: 10px;
+
+                            @media only screen and (max-device-width: 767px) {
+                                line-height: 18px;
+                                font-size: 12px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+**********/
 /************ 17. Accordion **********/
 .accordion {
-  background-color: #f8f8f8;
+  background-color: #fff;
   font-size: 14px; }
   .accordion .card {
-    border-radius: 0; }
+    border-radius: 0;
+    border: 0; }
     .accordion .card .card-header {
       padding: 0;
-      background-color: #f8f8f8; }
+      background-color: #fff; }
       .accordion .card .card-header h2 {
         font-size: 16px;
         line-height: 16px;
         text-align: left; }
         .accordion .card .card-header h2 button {
-          background-color: #333;
+          background-color: #fff;
           width: 100%;
-          color: #fff;
+          color: #6ab43e;
           font-weight: 600;
           text-align: left;
           border-radius: 0;
-          padding: 10px 0 8px 40px;
+          padding: 10px 0 15px 0;
           white-space: unset; }
-          .accordion .card .card-header h2 button:before {
-            position: absolute;
-            left: 15px;
-            top: 4px;
-            display: inline-block;
-            content: "<";
-            font-weight: 500;
-            font-size: 24px;
-            color: #6ab43e;
-            -webkit-transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                    transform: rotate(90deg); }
           .accordion .card .card-header h2 button.collapsed {
-            background-color: #f8f8f8;
-            color: #666; }
-            .accordion .card .card-header h2 button.collapsed:before {
-              color: #666;
-              -webkit-transform: rotate(-90deg);
-                  -ms-transform: rotate(-90deg);
-                      transform: rotate(-90deg);
-              top: 5px; }
+            background-color: #fff;
+            color: #333; }
           .accordion .card .card-header h2 button:hover, .accordion .card .card-header h2 button:focus, .accordion .card .card-header h2 button:active {
             text-decoration: none; }
     .accordion .card .collapse .card-body {
-      background-color: #f8f8f8;
-      font-size: 14px;
-      color: #000;
-      line-height: 28px; }
+      background-color: #fff;
+      font-size: 15px;
+      color: #3c5561;
+      line-height: 28px;
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: 400; }
       @media only screen and (max-device-width: 767px) {
         .accordion .card .collapse .card-body {
           padding: 5px; } }
