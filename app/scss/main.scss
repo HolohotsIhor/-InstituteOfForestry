@@ -46,6 +46,12 @@ body {
     font-size: $typography-color-standart;
 }
 
+code, kbd, pre, samp{
+	color: #787878;
+    letter-spacing: 1px;
+    font-family: 'Poppins', 'Open Sans';
+}
+
 section,
 footer {
     padding: $padding-standart;
@@ -1228,8 +1234,14 @@ textarea {
 }
 
 
-
 /* 5.  Slider */
+.slider {
+	padding: 0;
+	min-height: 700px;
+	background: url('../img/map.png');
+}
+
+/* 5.  Slider OLD
 .slider {
     background-color: #335a21;
     padding: 0;
@@ -1353,6 +1365,7 @@ textarea {
         }
     }
 }
+*/
 
 /* 6.  About works */
 .about-works {
@@ -1973,6 +1986,14 @@ footer {
         }
     }
 
+    a{
+    	color: $green;
+
+    	&:hover{
+    		color: $green;
+    	}
+    }
+
     img{
         max-width: 100%;
 
@@ -2076,11 +2097,6 @@ footer {
 
 .left-nav {
     text-align: left;
-    padding-top: 82px;
-
-    @media only screen and (max-device-width: 1199px) {
-        padding-top: 90px;
-    }
 
     @media only screen and (max-device-width: 991px) {
         display: none;
