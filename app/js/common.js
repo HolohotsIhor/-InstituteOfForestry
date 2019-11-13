@@ -1,5 +1,120 @@
 $(document).ready(function() {
 
+    /********** Map **********/
+    $('.marker-box .marker-item').mouseover(function(){
+        $('.list-box li a, .list-box li a span, .list-box ul li .numb').css('opacity', '.5');
+    })
+    .mouseout(function() {
+        $('.list-box li a, .list-box li a span, .list-box ul li .numb').css('opacity', '1');
+    });
+
+    $('.marker-box .marker-item:nth-child(1)').mouseover(function(){
+        $('.list-box li:nth-child(1) a, .list-box li:nth-child(1) a span, .list-box ul li:nth-child(1) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(1)').css('margin-left', '0');
+        $('.list-box li:nth-child(1)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(1)').css('margin-left', '30px');
+        $('.list-box li:nth-child(1)').css('padding-right', '0');
+    });
+
+    $('.marker-box .marker-item:nth-child(2)').mouseover(function(){
+        $('.list-box li:nth-child(2) a, .list-box li:nth-child(2) a span, .list-box ul li:nth-child(2) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(2)').css('margin-left', '0');
+        $('.list-box li:nth-child(2)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(2)').css('margin-left', '30px');
+        $('.list-box li:nth-child(2)').css('padding-right', '0');
+    });
+
+    $('.marker-box .marker-item:nth-child(3)').mouseover(function(){
+        $('.list-box li:nth-child(3) a, .list-box li:nth-child(3) a span, .list-box ul li:nth-child(3) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(3)').css('margin-left', '0');
+        $('.list-box li:nth-child(3)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(3)').css('margin-left', '30px');
+        $('.list-box li:nth-child(3)').css('padding-right', '0');
+    });
+
+    $('.marker-box .marker-item:nth-child(4)').mouseover(function(){
+        $('.list-box li:nth-child(4) a, .list-box li:nth-child(4) a span, .list-box ul li:nth-child(4) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(4)').css('margin-left', '0');
+        $('.list-box li:nth-child(4)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(4)').css('margin-left', '30px');
+        $('.list-box li:nth-child(4)').css('padding-right', '0');
+    });
+
+    $('.marker-box .marker-item:nth-child(5)').mouseover(function(){
+        $('.list-box li:nth-child(5) a, .list-box li:nth-child(5) a span, .list-box ul li:nth-child(5) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(5)').css('margin-left', '0');
+        $('.list-box li:nth-child(5)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(5)').css('margin-left', '30px');
+        $('.list-box li:nth-child(5)').css('padding-right', '0');
+    });
+
+    $('.marker-box .marker-item:nth-child(6)').mouseover(function(){
+        $('.list-box li:nth-child(6) a, .list-box li:nth-child(6) a span, .list-box ul li:nth-child(6) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(6)').css('margin-left', '0');
+        $('.list-box li:nth-child(6)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(6)').css('margin-left', '30px');
+        $('.list-box li:nth-child(6)').css('padding-right', '0');
+    });
+
+    $('.marker-box .marker-item:nth-child(7)').mouseover(function(){
+        $('.list-box li:nth-child(7) a, .list-box li:nth-child(7) a span, .list-box ul li:nth-child(7) .numb').css('opacity', '1');
+        $('.list-box li:nth-child(7)').css('margin-left', '0');
+        $('.list-box li:nth-child(7)').css('padding-right', '30px');
+    })
+    .mouseout(function() {
+        $('.list-box li:nth-child(7)').css('margin-left', '30px');
+        $('.list-box li:nth-child(7)').css('padding-right', '0');
+    });
+
+
+
+    $('.list-box ul li').mouseover(function(){
+        $('.marker-box .marker-item').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer-hover.png")');
+    })
+    .mouseout(function() {
+        $('.marker-box .marker-item').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(1)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(1)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(2)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(2)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(3)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(3)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(4)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(4)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(5)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(5)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(6)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(6)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
+    $('.list-box ul li:nth-child(7)').mouseover(function(){
+        $('.marker-box .marker-item:nth-child(7)').css('background-image', 'url("http://my-sitetest.xyz/institut/wp-content/themes/institut/img/map-pointer.png")');
+    });
+
     /********** Burger **********/
     $(".toggle_mnu").click(function() {
         $(".sandwich").toggleClass("active");
@@ -218,21 +333,21 @@ $(document).ready(function() {
     });
 
     $('.gallery-filter li:nth-child(1)').click(function() {
-         $('.fg-item').css('display', 'none');
-         setTimeout(function () {
-            $('.fg-item').css('display', 'inline-block');
-        }, 20);
-        $('.fg-item:nth-child(1)').parent().parent().css('animation-delay', '.1s');
-        $('.fg-item:nth-child(2)').parent().parent().css('animation-delay', '.2s');
-        $('.fg-item:nth-child(3)').parent().parent().css('animation-delay', '.3s');
-        $('.fg-item:nth-child(4)').parent().parent().css('animation-delay', '.4s');
-        $('.fg-item:nth-child(5)').parent().parent().css('animation-delay', '.5s');
-        $('.fg-item:nth-child(6)').parent().parent().css('animation-delay', '.6s');
-        $('.fg-item:nth-child(7)').parent().parent().css('animation-delay', '.7s');
-        $('.fg-item:nth-child(8)').parent().parent().css('animation-delay', '.8s');
-        $('.fg-item:nth-child(9)').parent().parent().css('animation-delay', '.9s');
-        $('.fg-item:nth-child(10)').parent().parent().css('animation-delay', '1s');
-    });
+     $('.fg-item').css('display', 'none');
+     setTimeout(function () {
+        $('.fg-item').css('display', 'inline-block');
+    }, 20);
+     $('.fg-item:nth-child(1)').parent().parent().css('animation-delay', '.1s');
+     $('.fg-item:nth-child(2)').parent().parent().css('animation-delay', '.2s');
+     $('.fg-item:nth-child(3)').parent().parent().css('animation-delay', '.3s');
+     $('.fg-item:nth-child(4)').parent().parent().css('animation-delay', '.4s');
+     $('.fg-item:nth-child(5)').parent().parent().css('animation-delay', '.5s');
+     $('.fg-item:nth-child(6)').parent().parent().css('animation-delay', '.6s');
+     $('.fg-item:nth-child(7)').parent().parent().css('animation-delay', '.7s');
+     $('.fg-item:nth-child(8)').parent().parent().css('animation-delay', '.8s');
+     $('.fg-item:nth-child(9)').parent().parent().css('animation-delay', '.9s');
+     $('.fg-item:nth-child(10)').parent().parent().css('animation-delay', '1s');
+ });
 
     $('.gallery-filter li:nth-child(2)').click(function() {
         $('.fg-item').css('display', 'none');
@@ -352,4 +467,51 @@ $(document).ready(function() {
         $('.group-7:nth-child(9)').parent().parent().css('animation-delay', '.9s');
         $('.group-7:nth-child(10)').parent().parent().css('animation-delay', '1s');
     });
+
+    /* Accordion settings*/
+    var $active = true;
+
+    $('.panel-title > a').click(function(e) {
+        e.preventDefault();
+    });
+
+    $('.collapse-init').on('click', function() {
+        if(!$active) {
+          $active = true;
+          $('.panel-title > a').attr('data-toggle', 'collapse');
+          $('.panel-collapse').collapse({'toggle': true, 'parent': '#accordion'});
+          $(this).html('Click to disable accordion behavior');
+      } else {
+          $active = false;
+          $('.panel-collapse').collapse({'toggle': true, 'parent': '#accordion'});
+          $('.panel-title > a').removeAttr('data-toggle');
+          $(this).html('Click to enable accordion behavior');
+      }
+  });
 });
+
+
+
+
+
+
+/* Filter logic */
+jQuery(function($){
+    $('#filter').submit(function(){
+        var filter = $('#filter');
+        $.ajax({
+            url:filter.attr('action'),
+            data:filter.serialize(), // form data
+            type:filter.attr('method'), // POST
+            beforeSend:function(xhr){
+                filter.find('button').text('Поиск публикаций...'); // changing the button label
+            },
+            success:function(data){
+                filter.find('button').text('Применить фильтр'); // changing the button label back
+                $('#response').html(data); // insert data
+            }
+        });
+        return false;
+    });
+});
+
