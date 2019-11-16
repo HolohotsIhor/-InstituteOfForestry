@@ -21,6 +21,8 @@
 19. Gallery
 20. Search box
 21. Filter box
+22. User login
+23. Progil
 
 */
 
@@ -2350,14 +2352,14 @@ footer {
         }
     }
 
-    #base-response{
+    #base-response {
 
-        .post-box{
+        .post-box {
 
-            h3{
+            h3 {
 
-                a{
-                    font-size: 15px;
+                a {
+                    font-size: 13px;
                     line-height: 10px;
                 }
             }
@@ -3029,7 +3031,7 @@ footer {
         margin-bottom: 70px;
 
         @media only screen and (max-device-width: 991px) {
-           margin-bottom: 30px; 
+            margin-bottom: 30px;
         }
 
         li {
@@ -3048,13 +3050,13 @@ footer {
                 }
             }
 
-            &:nth-child(2){
+            &:nth-child(2) {
                 display: none;
             }
 
-            &:nth-child(3){
+            &:nth-child(3) {
 
-                input{
+                input {
                     background-color: $green;
                     color: $white;
                     border-radius: 0;
@@ -3070,11 +3072,11 @@ footer {
         }
     }
 
-    #filter{
+    #filter {
         letter-spacing: 0;
         font-size: 14px;
 
-        button{
+        button {
             background-color: $green;
             color: $white;
             border-radius: 0;
@@ -3087,44 +3089,44 @@ footer {
             line-height: 14px;
         }
 
-        .filter-box{
+        .filter-box {
             margin-bottom: 20px;
 
-            &.radio{
+            &.radio {
                 margin-bottom: 20px;
 
-                label{
+                label {
                     width: 50%;
                     float: left;
                     text-align: left;
                     margin-bottom: 0;
 
-                    &.last{
+                    &.last {
                         text-align: right;
                     }
 
-                    input{
+                    input {
                         margin-bottom: 0;
                     }
                 }
             }
         }
 
-        #categoryfilter{
+        #categoryfilter {
             display: none;
         }
-        
-        span{
+
+        span {
             width: 100%;
             text-align: left;
             display: block;
             margin-bottom: 5px;
         }
 
-        input{
+        input {
             margin-bottom: 20px;
 
-            &.price{
+            &.price {
                 width: 46%;
                 float: left;
                 height: 40px;
@@ -3132,14 +3134,14 @@ footer {
                 padding-left: 5px;
                 border: 1px solid #e1e1e1;
                 border-radius: 2px;
-                
-                &.first{
+
+                &.first {
                     margin-right: 8%;
                 }
             }
         }
 
-        select#authorfilter{
+        select#authorfilter {
             color: #787878;
             height: 40px;
             margin-bottom: 10px;
@@ -3147,6 +3149,118 @@ footer {
             border: 1px solid #e1e1e1;
             width: 100%;
             border-radius: 2px;
+        }
+    }
+}
+
+/* 22. User login */
+.user-login {
+
+    .login-form {
+        margin: 0 auto;
+        text-align: left;
+        padding-top: 60px;
+
+        p {
+            width: 100%;
+
+            span {
+                display: block;
+                width: 100%;
+            }
+
+            input {
+                width: 100%;
+                background: $white;
+                -webkit-border-radius: 3px;
+                font-weight: normal;
+                padding-left: 10px;
+                height: 40px;
+                width: 100%;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+                border: 0;
+                font-size: 14px;
+                color: #3c5561;
+                border: solid 1px #ccc;
+            }
+
+            &.login-remember{
+
+                label{
+                    display: inline-block;
+
+                    input{
+                        border: 0;
+                        box-shadow: none;
+                        height: auto;
+                        width: 18px;
+                    }
+                }
+            }
+
+            &.login-submit{
+
+                input{
+
+                    &.button{
+                        background-color: $green;
+                        border: 0;
+                        color: $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 23. Progil */
+.user-profile{
+
+    .card-body{
+
+        p{
+
+            a{
+                color: $green;
+            }
+        }
+    }
+
+    .profile-user-info{
+        text-align: left;
+        letter-spacing: 0;
+
+        @media only screen and (max-device-width: 991px) {
+            text-align: center;
+        }
+
+        img{
+            max-width: 100%;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .text-user{
+            display: inline-block;
+            line-height: 14px;
+            text-align: left;
+
+            @media only screen and (max-device-width: 991px) {
+                font-size: 14px;
+            }
+
+            @media only screen and (max-device-width: 991px) {
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            p{
+                margin-bottom: 0;
+            }
         }
     }
 }

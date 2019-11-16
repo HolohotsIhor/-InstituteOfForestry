@@ -132,100 +132,95 @@
         </div>
     </header>
     <!-- / Search modal window -->
-    <!-- Breadcrumbs -->
-    <section id="breadcrumbs" class="breadcrumbs">
+
+    <!-- Login -->
+   <section id="user-login" class="user-login">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 breadkrambs">
-                    <div class="wrapper">
-                        <h1>Внутренняя страница</h1>
-                        <span property="itemListElement" typeof="ListItem">
-                            <a property="item" typeof="WebPage" title="Перейти к Врач Бродская." href="#" class="home"><span property="name">Главная</span></a>
-                            <meta property="position" content="1"></span> &gt; <span class="post post-page current-item">Внутренняя страница</span>
-                        </div>
-                    </div>
-                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 login-form">
+                    
+        <form name="loginform" id="loginform" action="http://my-sitetest.xyz/institut/wp-login.php" method="post">
+            
+            <p class="login-username">
+                <label for="user_login">Имя пользователя</label>
+                <input type="text" name="log" id="user_login" class="input" value="" size="20">
+            </p>
+            <p class="login-password">
+                <label for="user_pass">Пароль</label>
+                <input type="password" name="pwd" id="user_pass" class="input" value="" size="20">
+            </p>
+            
+            <p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Запомнить меня</label></p>
+            <p class="login-submit">
+                <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Войти">
+                <input type="hidden" name="redirect_to" value="http://my-sitetest.xyz/institut/profil-redaktirovanie/">
+            </p>
+            
+        </form><a href="http://my-sitetest.xyz/institut/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Fmy-sitetest.xyz%2Finstitut%2Fprofil%2F&amp;_wpnonce=bb2f078469">Выйти</a>               </div>
             </div>
-        </section>
-        <!-- / Breadcrumbs -->
-        <!-- Work-zone -->
-        <section id="serch-result" class="serch-result">
-            <div class="container">
-                <h1>Результат поиска: <span>Аспирант</span></h1>
-                <div id="posts">
-                    <h2><a href="http://my-sitetest.xyz/institut/aspirantura/">Аспирантура</a></h2>
-                    <p></p><p>Порядок приемаИнститут осуществляет приём на конкурсной основе в очную аспирантуру по следующим направлениям подготовки (направленности): 06.00.00 – Биологические науки (03.02.08 – Экология). 35.00.00 – Сельское лесное и рыбное хозяйство (06.03.02 – Лесоведение, лесоводство, лесоустройство и лесная таксация); Ознакомиться с правилами приема можно по ссылке (файл Правила приема). Минимальное количество баллов за экзамен по специальности, необходимое […]</p>
-                    <p></p>
-                    <div>Дата регистрации: 30.10.2019</div>
-                </div>
-                <div id="posts">
-                    <h2><a href="http://my-sitetest.xyz/institut/deyatelnost/">Деятельность института</a></h2>
-                    <p></p><p>Информация подготавливается к размещению… Федеральное государственное бюджетное учреждение науки Институт лесоведения Российской академии наук — это научно-исследовательское учреждение со сложившимся научным коллективом, занимающее в европейской части России ведущее место в области лесоведения и лесной экологии. Основным направлением научных исследований является раскрытие механизмов функционирования лесных экосистем как основы управления продуктивностью, устойчивостью и защитными функциями леса в […]</p>
-                    <p></p>
-                    <div>Дата регистрации: </div>
-                </div>
-            </div>
-        </section>
-        <!-- / Work-zone -->
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row top-bar">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 item-grid">
-                        <a href="#" class="footer__logo">
-                            <img src="img/logo.png" alt="logo">
-                            <h1>Институт лесоведения <br> <span>Российской академии наук</span></h1>
-                        </a>
-                        <ul>
-                            <li><i class="fa fa-map-marker"></i> Почтовый адрес: Институт лесоведения РАН, Советская 21,
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row top-bar">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 item-grid">
+                    <a href="#" class="footer__logo">
+                        <img src="img/logo.png" alt="logo">
+                        <h1>Институт лесоведения <br> <span>Российской академии наук</span></h1>
+                    </a>
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> Почтовый адрес: Институт лесоведения РАН, Советская 21,
                             п/о Успенское, Московская обл. 143030 Россия</li>
-                            <li><i class="fa fa-envelope-open"></i> <a href="mailto:root@ilan.ras.ru"> root@ilan.ras.ru</a></li>
-                            <li><i class="fa fa-phone"></i> <a href="tel:123456789">+12 123 456 789</a></li>
+                        <li><i class="fa fa-envelope-open"></i> <a href="mailto:root@ilan.ras.ru"> root@ilan.ras.ru</a></li>
+                        <li><i class="fa fa-phone"></i> <a href="tel:123456789">+12 123 456 789</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-nav-box">
+                    <h4>Меню</h4>
+                    <div class="menu-glavnoe-menyu-container">
+                        <ul id="menu-glavnoe-menyu" class="menu">
+                            <li class="current-menu-item"><a href="#">Главная</a></li>
+                            <li class="menu-item-has-children"><a href="#">Об институте</a></li>
+                            <li class="menu-item-has-children"><a href="#">Наука</a></li>
+                            <li class="menu-item-has-children"><a href="#">Образование</a></li>
+                            <li class="menu-item-has-children"><a href="#">Диссовет</a></li>
+                            <li><a href="#">Фотогалерея</a></li>
+                            <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-nav-box">
-                        <h4>Меню</h4>
-                        <div class="menu-glavnoe-menyu-container">
-                            <ul id="menu-glavnoe-menyu" class="menu">
-                                <li class="current-menu-item"><a href="#">Главная</a></li>
-                                <li class="menu-item-has-children"><a href="#">Об институте</a></li>
-                                <li class="menu-item-has-children"><a href="#">Наука</a></li>
-                                <li class="menu-item-has-children"><a href="#">Образование</a></li>
-                                <li class="menu-item-has-children"><a href="#">Диссовет</a></li>
-                                <li><a href="#">Фотогалерея</a></li>
-                                <li><a href="#">Контакты</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 search-item">
-                        <h4>Поиск по сайту</h4>
-                        <div class="search-box">
-                            <form role="search" method="get" id="searchform" action="#">
-                                <input type="text" value="" name="s" id="s">
-                            </form>
-                        </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 search-item">
+                    <h4>Поиск по сайту</h4>
+                    <div class="search-box">
+                        <form role="search" method="get" id="searchform" action="#">
+                            <input type="text" value="" name="s" id="s">
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="bottom-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 left-side">
-                            © 1997 — 2019. <a href="#">Институт лесоведения РАН</a>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 right-side">
-                            <a href="https://www.instagram.com/" class="social-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 left-side">
+                        © 1997 — 2019. <a href="#">Институт лесоведения РАН</a>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 right-side">
+                        <a href="https://www.instagram.com/" class="social-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- / Footer -->
-        <!-- Scrool to top -->
-        <a href="#" class="scrollup">›</a>
-        <!-- / Scrool to top -->
-        <script src="js/libs.min.js"></script>
-        <script src="js/common.js"></script>
-    </body>
+        </div>
+    </footer>
+    <!-- / Footer -->
+    <!-- Scrool to top -->
+    <a href="#" class="scrollup">›</a>
+    <!-- / Scrool to top -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
 
-    </html>
+</html>

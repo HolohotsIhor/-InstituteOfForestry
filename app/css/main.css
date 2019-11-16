@@ -21,6 +21,8 @@
 19. Gallery
 20. Search box
 21. Filter box
+22. User login
+23. Progil
 
 */
 /* 1.  Fonts including */
@@ -1746,7 +1748,7 @@ footer {
     color: #3c5561;
     line-height: 28px; }
   .work-zone #base-response .post-box h3 a {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 10px; }
 
 /* 14. Breadcrumbs contact */
@@ -2328,3 +2330,72 @@ footer {
       border: 1px solid #e1e1e1;
       width: 100%;
       border-radius: 2px; }
+
+/* 22. User login */
+.user-login .login-form {
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 60px; }
+  .user-login .login-form p {
+    width: 100%; }
+    .user-login .login-form p span {
+      display: block;
+      width: 100%; }
+    .user-login .login-form p input {
+      width: 100%;
+      background: #fff;
+      -webkit-border-radius: 3px;
+      font-weight: normal;
+      padding-left: 10px;
+      height: 40px;
+      width: 100%;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      -webkit-box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+              box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+      border: 0;
+      font-size: 14px;
+      color: #3c5561;
+      border: solid 1px #ccc; }
+    .user-login .login-form p.login-remember label {
+      display: inline-block; }
+      .user-login .login-form p.login-remember label input {
+        border: 0;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        height: auto;
+        width: 18px; }
+    .user-login .login-form p.login-submit input.button {
+      background-color: #6ab43e;
+      border: 0;
+      color: #fff;
+      cursor: pointer; }
+
+/* 23. Progil */
+.user-profile .card-body p a {
+  color: #6ab43e; }
+
+.user-profile .profile-user-info {
+  text-align: left;
+  letter-spacing: 0; }
+  @media only screen and (max-device-width: 991px) {
+    .user-profile .profile-user-info {
+      text-align: center; } }
+  .user-profile .profile-user-info img {
+    max-width: 100%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; }
+  .user-profile .profile-user-info .text-user {
+    display: inline-block;
+    line-height: 14px;
+    text-align: left; }
+    @media only screen and (max-device-width: 991px) {
+      .user-profile .profile-user-info .text-user {
+        font-size: 14px; } }
+    @media only screen and (max-device-width: 991px) {
+      .user-profile .profile-user-info .text-user {
+        display: block;
+        margin-bottom: 30px; } }
+    .user-profile .profile-user-info .text-user p {
+      margin-bottom: 0; }
