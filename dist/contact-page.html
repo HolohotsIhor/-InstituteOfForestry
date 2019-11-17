@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Институт лесоведения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="navbar">
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5 col-md-0 col-sm-0 col-0 left-side">
+                        <ul class="header__contact">
+                            <li class="header-phone"><i class="fa fa-phone" aria-hidden="true"></i> +7 (495) 634-52-57</li>
+                            <li class="header-email"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:root@ilan.ras.ru"> root@ilan.ras.ru</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-8 col-lg-7 col-md-0 col-sm-0 col-0 right-side">
+                        <div class="wrapper">
+                            <div class="search-box">
+                                <form role="search" method="get" id="searchform" action="#">
+                                    <input type="text" value="" name="s" id="s">
+                                </form>
+                            </div>
+                            <div class="language-switcher">
+                                <select name="lang_choice_1" id="lang_choice_1">
+                                    <option value="ru" selected="selected">Ру</option>
+                                    <option value="en">En</option>
+                                </select>
+                            </div>
+                            <a href="https://www.instagram.com/" class="social-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://elibrary.ru/defaultx.asp" class="btn" target="_blank">E-library</a>
+                            <a class="btn">ЛК аспиранта</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="container">
+                <div class="header__logo-box">
+                    <a href="#">
+                        <img src="img/logo.png" alt="logo">
+                        <h1>Институт лесоведения <br> <span>Российской академии наук</span></h1>
+                    </a>
+                    <!-- Search modal -->
+                    <a href="#" class="modal-search">&nbsp;</a>
+                    <!-- Burger -->
+                    <button class="toggle_mnu">
+                        <span class="sandwich">
+                            <span class="sw-topper"></span>
+                            <span class="sw-bottom"></span>
+                            <span class="sw-footer"></span>
+                        </span>
+                    </button>
+                    <!-- Mobile menu -->
+                    <nav class="top_mnu">
+                        <div class="social-box">
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="menu-glavnoe-menyu-container">
+                            <ul id="menu-glavnoe-menyu" class="menu">
+                                <li class="current-menu-item"><a href="#">Главная</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Об институте</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Подменю 1</a></li>
+                                        <li><a href="#">Подменю 2</a></li>
+                                        <li><a href="#">Подменю 3</a></li>
+                                        <li><a href="#">Подменю 4</a></li>
+                                        <li><a href="#">Подменю 5</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Наука</a></li>
+                                <li class="menu-item-has-children"><a href="#">Образование</a></li>
+                                <li class="menu-item-has-children"><a href="#">Диссовет</a></li>
+                                <li><a href="#">Фотогалерея</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="header__nav">
+                    <div class="menu-glavnoe-menyu-container">
+                        <ul id="menu-glavnoe-menyu" class="menu">
+                            <li class="current-menu-item"><a href="#">Главная</a></li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Об институте</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Подменю 1</a></li>
+                                    <li><a href="#">Подменю 2</a></li>
+                                    <li><a href="#">Подменю 3</a></li>
+                                    <li><a href="#">Подменю 4</a></li>
+                                    <li><a href="#">Подменю 5</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Наука</a></li>
+                            <li class="menu-item-has-children"><a href="#">Образование</a></li>
+                            <li class="menu-item-has-children"><a href="#">Диссовет</a></li>
+                            <li><a href="#">Фотогалерея</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Search modal window -->
+        <div class="modal-window-search">
+            <button class="toggle_mnu_search">
+                <span class="sandwich">
+                    <span class="sw-topper"></span>
+                    <span class="sw-bottom"></span>
+                </span>
+            </button>
+            <div class="search-box">
+                <div class="centre-align">
+                    <form role="search" method="get" id="searchform" action="#">
+                        <input type="text" value="" name="s" id="s" placeholder="Enter text to search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- / Search modal window -->
+    <!-- Breadcrumbs contact -->
+    <section id="breadcrumbs-contact" class="breadcrumbs-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 breadkrambs">
+                    <div class="wrapper">
+                        <h1>Внутренняя страница</h1>
+                        <span property="itemListElement" typeof="ListItem">
+                            <a property="item" typeof="WebPage" title="Перейти к Врач Бродская." href="#" class="home"><span property="name">Главная</span></a>
+                            <meta property="position" content="1"></span> &gt; <span class="post post-page current-item">Внутренняя страница</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / Breadcrumbs contact -->
+        <!-- Work-zone contact -->
+        <section id="work-zone-contact" class="work-zone-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 item-contact">
+                        <div class="item-contact-info-box">
+                            <i class="fa fa-map"></i>
+                            <h4>Адрес</h4>
+                            <p>Россия, Московская обл., п/о Успенское, Советская 21,
+                            143030 </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 item-contact">
+                        <div class="item-contact-info-box">
+                            <i class="fa fa-phone"></i>
+                            <h4>Телефоны</h4>
+                            <p>Тел./факс: +7 (495) 634-52-57 (админ.) <br> Тел.: +7 (495) 634-52-59 (лаб.) </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 item-contact">
+                        <div class="item-contact-info-box">
+                            <i class="fa fa-envelope-open"></i>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h2 class="section-title">Задайте вопрос</h2>
+                    </div>
+                    <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12 form-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt atque quasi rerum voluptatibus, veritatis ducimus velit minus sequi harum, pariatur blanditiis itaque explicabo iusto ullam ab, voluptas, maiores veniam.</p>
+                        <div role="form" class="wpcf7" id="wpcf7-f172-p36-o1" lang="ru-RU" dir="ltr">
+                            <div class="screen-reader-response"></div>
+                            <form action="/institut/kontakty/#wpcf7-f172-p36-o1" method="post" class="wpcf7-form" enctype="multipart/form-data" novalidate="novalidate">
+                                <div style="display: none;">
+                                    <input type="hidden" name="_wpcf7" value="172">
+                                    <input type="hidden" name="_wpcf7_version" value="5.1.4">
+                                    <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f172-p36-o1">
+                                    <input type="hidden" name="_wpcf7_container_post" value="36">
+                                </div>
+                                <p><span class="form-line"><br>
+                                    <span class="wpcf7-form-control-wrap text-846"><input type="text" name="text-846" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Фамилия*"></span><br>
+                                    <span class="wpcf7-form-control-wrap text-847"><input type="text" name="text-847" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя*"></span><br>
+                                </span><br>
+                                <span class="form-line"><br>
+                                    <span class="wpcf7-form-control-wrap text-848"><input type="text" name="text-848" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Отчество"></span><br>
+                                    <span class="wpcf7-form-control-wrap email-105"><input type="email" name="email-105" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email адрес*"></span><br>
+                                </span><br>
+                                <span class="form-line"><br>
+                                    <span class="wpcf7-form-control-wrap textarea-471"><textarea name="textarea-471" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Текст сообщения*"></textarea></span><br>
+                                </span><br>
+                                <span class="form-line"><br>
+                                    <span class="wpcf7-form-control-wrap file-282"><input type="file" name="file-282" size="40" class="wpcf7-form-control wpcf7-file" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-invalid="false"></span><br>
+                                    <span class="wpcf7-form-control-wrap checkbox-629"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first last"><span class="wpcf7-list-item-label">Даю согласие на обработку персональных данных (для физических лиц) включая сбор, систематизацию, накопление, хранение, использование, обезличивание, блокирование и уничтожение.</span><input type="checkbox" name="checkbox-629[]" value="Даю согласие на обработку персональных данных (для физических лиц) включая сбор, систематизацию, накопление, хранение, использование, обезличивание, блокирование и уничтожение."></span></span></span><br>
+                                </span><br>
+                                <input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+                                <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- / Work-zone contact -->
+
+                <!-- Map -->
+                <section id="map-box" class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.4346864040854!2d37.063012415929144!3d55.71619758054363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b55b888e10f22f%3A0x7de532de45bed021!2z0KHQvtCy0LXRgtGB0LrQsNGPINGD0LsuLCAyMSwg0KPRgdC_0LXQvdGB0LrQvtC1LCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDE0MzAzMA!5e0!3m2!1sru!2sua!4v1572515734060!5m2!1sru!2sua" width="100%" height="450"></iframe>
+                </section>
+                <!-- / Map -->
+                
+                <!-- Footer -->
+                <footer>
+                    <div class="container">
+                        <div class="row top-bar">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 item-grid">
+                                <a href="#" class="footer__logo">
+                                    <img src="img/logo.png" alt="logo">
+                                    <h1>Институт лесоведения <br> <span>Российской академии наук</span></h1>
+                                </a>
+                                <ul>
+                                    <li><i class="fa fa-map-marker"></i> Почтовый адрес: Институт лесоведения РАН, Советская 21,
+                                    п/о Успенское, Московская обл. 143030 Россия</li>
+                                    <li><i class="fa fa-envelope-open"></i> <a href="mailto:root@ilan.ras.ru"> root@ilan.ras.ru</a></li>
+                                    <li><i class="fa fa-phone"></i> <a href="tel:123456789">+12 123 456 789</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 bottom-nav-box">
+                                <h4>Меню</h4>
+                                <div class="menu-glavnoe-menyu-container">
+                                    <ul id="menu-glavnoe-menyu" class="menu">
+                                        <li class="current-menu-item"><a href="#">Главная</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Об институте</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Наука</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Образование</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Диссовет</a></li>
+                                        <li><a href="#">Фотогалерея</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 search-item">
+                                <h4>Поиск по сайту</h4>
+                                <div class="search-box">
+                                    <form role="search" method="get" id="searchform" action="#">
+                                        <input type="text" value="" name="s" id="s">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-bar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 left-side">
+                                    © 1997 — 2019. <a href="#">Институт лесоведения РАН</a>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 right-side">
+                                    <a href="https://www.instagram.com/" class="social-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- / Footer -->
+                <!-- Scrool to top -->
+                <a href="#" class="scrollup">›</a>
+                <!-- / Scrool to top -->
+                <script src="js/libs.min.js"></script>
+                <script src="js/common.js"></script>
+            </body>
+
+            </html>

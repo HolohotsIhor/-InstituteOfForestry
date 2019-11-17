@@ -1259,21 +1259,52 @@ textarea {
 .slider {
     padding: 0;
     padding-top: 100px;
-    min-height: 830px;
+    height: 830px;
     background: url('../img/map.png');
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
     font-family: 'ProximaNova-Regular', 'Poppins', 'Open Sans';
 
+    @media only screen and (max-device-width: 1199px) {
+        background-size: 1500px;
+        height: 622px;
+        background-position-y: 75px;
+    }
+
+    @media only screen and (max-device-width: 991px) {
+        background: url('../img/map-mobile.png');
+        background-repeat: no-repeat;
+        background-size: 1200px;
+        background-position-x: center;
+        background-position-y: center;
+    }
+
     @media only screen and (min-device-width: 992px) {
+
         .container {
             max-width: 960px;
         }
     }
 
+    @media only screen and (max-device-width: 767px) {
+        background-position-x: left;
+    }
+
+    @media only screen and (max-device-width: 440px) {
+        background-position-x: -100px;
+    }
+
+    @media only screen and (max-device-width: 350px) {
+        background-position-x: -200px;
+    }
+
     .marker-box {
         position: relative;
+
+        @media only screen and (max-device-width: 991px) {
+            display: none;
+        }
 
         .marker-item {
             cursor: pointer;
@@ -1299,50 +1330,87 @@ textarea {
             &:nth-child(1) {
                 position: absolute;
                 top: 10px;
-                left: 290px;
+                left: 120px;
                 animation-delay: .2s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    top: 0px;
+                    left: 200px;
+                }
             }
 
             &:nth-child(2) {
                 position: absolute;
-                top: 235px;
-                left: 271px;
+                top: 192px;
+                left: 122px;
                 animation-delay: .4s;
+                
+                @media only screen and (max-device-width: 1199px) {
+                    top: 143px;
+                    left: 195px;
+                }  
             }
 
             &:nth-child(3) {
                 position: absolute;
-                top: 225px;
-                left: 117px;
+                top: 234px;
+                left: -50px;
                 animation-delay: .6s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    top: 175px;
+                    left: 68px;
+                } 
+
+                
             }
 
             &:nth-child(4) {
                 position: absolute;
-                top: 304px;
-                left: 213px;
+                top: 310px;
+                left: 75px;
                 animation-delay: .8s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    top: 235px;
+                    left: 161px;
+                } 
             }
 
             &:nth-child(5) {
                 position: absolute;
-                top: 393px;
-                left: 290px;
+                top: 440px;
+                left: 125px;
                 animation-delay: 1s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    top: 336px;
+                    left: 197px;
+                } 
             }
 
             &:nth-child(6) {
                 position: absolute;
-                top: 520px;
-                left: 306px;
+                top: 594px;
+                left: 144px;
                 animation-delay: 1.2s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    top: 455px;
+                    left: 213px;
+                } 
             }
 
             &:nth-child(7) {
                 position: absolute;
-                top: 518px;
-                left: 179px;
+                top: 602px;
+                left: 22px;
                 animation-delay: 1.4s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    top: 463px;
+                    left: 121px;
+                } 
             }
         }
     }
@@ -1352,8 +1420,28 @@ textarea {
         font-size: 18px;
         transition: .4s;
         letter-spacing: 0;
+        line-height: 30px;
+        padding-top: 20px;
+
+        @media only screen and (max-device-width: 1199px) {
+           line-height: 32px;
+           font-size: 16px; 
+        }
+
+        @media only screen and (max-device-width: 991px) {
+            line-height: 20px;
+            font-size: 14px; 
+        }
 
         ul {
+
+            @media only screen and (max-device-width: 991px) {
+                margin-left: 200px;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                margin-left: 0px;
+            }
 
             li {
                 margin-bottom: 28px;
@@ -1363,6 +1451,16 @@ textarea {
                 opacity: 0;
                 margin-left: 30px;
                 transition: .4s;
+
+                @media only screen and (max-device-width: 1199px) {
+                    margin-bottom: 15px;
+                }
+
+                @media only screen and (max-device-width: 440px) {
+                    margin-left: 0;
+                    padding-left: 40px;
+                    letter-spacing: -1px;
+                }
 
                 a {
                     color: #282828;
@@ -1384,8 +1482,19 @@ textarea {
                         color: $green;
                         font-size: 32px;
                         position: absolute;
-                        top: 5px;
+                        top: 13px;
                         left: 0px;
+
+                        @media only screen and (max-device-width: 1199px) {
+                            font-size: 28px;
+                            top: 10px;
+                            left: 5px;
+                        }
+
+                        @media only screen and (max-device-width: 440px) {
+                            font-size: 22px;
+                            left: 0;
+                        }
                     }
                 }
 
