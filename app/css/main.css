@@ -954,7 +954,8 @@ textarea {
       background-repeat: no-repeat;
       background-size: 1200px;
       background-position-x: center;
-      background-position-y: center; } }
+      background-position-y: 75px;
+      height: 510px; } }
   @media only screen and (min-device-width: 992px) {
     .slider .container {
       max-width: 960px; } }
@@ -1073,15 +1074,18 @@ textarea {
     padding-top: 20px; }
     @media only screen and (max-device-width: 1199px) {
       .slider .list-box {
-        line-height: 32px;
+        line-height: 27px;
         font-size: 16px; } }
     @media only screen and (max-device-width: 991px) {
       .slider .list-box {
         line-height: 20px;
         font-size: 14px; } }
     @media only screen and (max-device-width: 991px) {
+      .slider .list-box {
+        padding-top: 5px; } }
+    @media only screen and (max-device-width: 991px) {
       .slider .list-box ul {
-        margin-left: 200px; } }
+        margin-left: 120px; } }
     @media only screen and (max-device-width: 767px) {
       .slider .list-box ul {
         margin-left: 0px; } }
@@ -1098,10 +1102,13 @@ textarea {
       @media only screen and (max-device-width: 1199px) {
         .slider .list-box ul li {
           margin-bottom: 15px; } }
+      @media only screen and (max-device-width: 991px) {
+        .slider .list-box ul li {
+          padding-left: 50px; } }
       @media only screen and (max-device-width: 440px) {
         .slider .list-box ul li {
           margin-left: 0;
-          padding-left: 40px;
+          padding-left: 30px;
           letter-spacing: -1px; } }
       .slider .list-box ul li a {
         color: #282828;
@@ -1126,7 +1133,7 @@ textarea {
         @media only screen and (max-device-width: 440px) {
           .slider .list-box ul li .numb {
             font-size: 22px;
-            left: 0; } }
+            left: -5px; } }
       .slider .list-box ul li:nth-child(1) {
         -webkit-animation-delay: .2s;
                 animation-delay: .2s; }
@@ -1854,7 +1861,11 @@ footer {
     font-weight: 300; }
     @media only screen and (max-device-width: 767px) {
       .breadcrumbs-contact h1 {
-        font-size: 22px; } }
+        display: block;
+        width: 100%; } }
+    @media only screen and (max-device-width: 767px) {
+      .breadcrumbs-contact h1 {
+        font-size: 18px; } }
   .breadcrumbs-contact a {
     color: #333;
     -webkit-transition: .2s;
