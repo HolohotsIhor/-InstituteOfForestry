@@ -75,11 +75,11 @@ samp {
 
 section,
 footer {
-    padding: $padding-standart;
+    padding: 70px 0;
     text-align: center;
 
     @media only screen and (max-device-width: 767px) {
-        padding: $padding-small;
+        padding: 40px 0;
     }
 }
 
@@ -374,7 +374,7 @@ header {
 
                 a {
                     i {
-                        font-size: 21px;
+                        font-size: 25px;
                     }
 
                     &.social-link {
@@ -432,6 +432,7 @@ header {
                         background-color: transparent;
                         cursor: pointer;
                         border: 0;
+                        text-transform: uppercase;
 
                         &:focus,
                         &:hover {
@@ -1259,11 +1260,11 @@ textarea {
 .slider {
     padding: 0;
     padding-top: 100px;
-    height: 830px;
+    height: 780px;
     background: url('../img/map.png');
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 80px;
     font-family: 'ProximaNova-Regular', 'Poppins', 'Open Sans';
 
     @media only screen and (max-device-width: 1199px) {
@@ -1330,8 +1331,8 @@ textarea {
 
             &:nth-child(1) {
                 position: absolute;
-                top: 10px;
-                left: 120px;
+                top: 20px;
+                left: 117px;
                 animation-delay: .2s;
 
                 @media only screen and (max-device-width: 1199px) {
@@ -1342,7 +1343,7 @@ textarea {
 
             &:nth-child(2) {
                 position: absolute;
-                top: 192px;
+                top: 205px;
                 left: 122px;
                 animation-delay: .4s;
                 
@@ -1354,8 +1355,8 @@ textarea {
 
             &:nth-child(3) {
                 position: absolute;
-                top: 234px;
-                left: -50px;
+                top: 252px;
+                left: -43px;
                 animation-delay: .6s;
 
                 @media only screen and (max-device-width: 1199px) {
@@ -1368,8 +1369,8 @@ textarea {
 
             &:nth-child(4) {
                 position: absolute;
-                top: 310px;
-                left: 75px;
+                top: 325px;
+                left: 79px;
                 animation-delay: .8s;
 
                 @media only screen and (max-device-width: 1199px) {
@@ -1380,8 +1381,8 @@ textarea {
 
             &:nth-child(5) {
                 position: absolute;
-                top: 440px;
-                left: 125px;
+                top: 453px;
+                left: 123px;
                 animation-delay: 1s;
 
                 @media only screen and (max-device-width: 1199px) {
@@ -1392,7 +1393,7 @@ textarea {
 
             &:nth-child(6) {
                 position: absolute;
-                top: 594px;
+                top: 609px;
                 left: 144px;
                 animation-delay: 1.2s;
 
@@ -1404,8 +1405,8 @@ textarea {
 
             &:nth-child(7) {
                 position: absolute;
-                top: 602px;
-                left: 22px;
+                top: 618px;
+                left: 20px;
                 animation-delay: 1.4s;
 
                 @media only screen and (max-device-width: 1199px) {
@@ -1421,122 +1422,119 @@ textarea {
         font-size: 18px;
         transition: .4s;
         letter-spacing: 0;
-        line-height: 30px;
+        line-height: 28px;
         padding-top: 20px;
 
         @media only screen and (max-device-width: 1199px) {
-           line-height: 27px;
-           font-size: 16px; 
-        }
+         line-height: 23px;
+         font-size: 16px; 
+     }
+
+     @media only screen and (max-device-width: 991px) {
+        line-height: 18px;
+        font-size: 14px; 
+        padding-top: 5px;
+    }
+
+    ul {
 
         @media only screen and (max-device-width: 991px) {
-            line-height: 20px;
-            font-size: 14px; 
+            margin-left: 120px;
         }
 
-        @media only screen and (max-device-width: 991px) {
-            padding-top: 5px;
+        @media only screen and (max-device-width: 767px) {
+            margin-left: 0px;
         }
 
-        ul {
+        li {
+            margin-bottom: 21px;
+            font-family: 'ProximaNova-Bold', 'Poppins', 'Open Sans';
+            position: relative;
+            padding-left: 50px;
+            opacity: 0;
+            margin-left: 30px;
+            transition: .4s;
+
+            @media only screen and (max-device-width: 1199px) {
+                margin-bottom: 15px;
+            }
 
             @media only screen and (max-device-width: 991px) {
-                margin-left: 120px;
+                padding-left: 50px;
             }
 
-            @media only screen and (max-device-width: 767px) {
-                margin-left: 0px;
+            @media only screen and (max-device-width: 440px) {
+                margin-left: 0;
+                padding-left: 30px;
+                letter-spacing: -1px;
             }
 
-            li {
-                margin-bottom: 28px;
-                font-family: 'ProximaNova-Bold', 'Poppins', 'Open Sans';
-                position: relative;
-                padding-left: 70px;
-                opacity: 0;
-                margin-left: 30px;
-                transition: .4s;
+            a {
+                color: #282828;
+                font-family: 'ProximaNova-Regular', 'Poppins', 'Open Sans';
 
-                @media only screen and (max-device-width: 1199px) {
-                    margin-bottom: 15px;
-                }
-
-                @media only screen and (max-device-width: 991px) {
-                    padding-left: 50px;
-                }
-
-                @media only screen and (max-device-width: 440px) {
-                    margin-left: 0;
-                    padding-left: 30px;
-                    letter-spacing: -1px;
-                }
-
-                a {
+                &:hover {
                     color: #282828;
-                    font-family: 'ProximaNova-Regular', 'Poppins', 'Open Sans';
+                }
 
-                    &:hover {
-                        color: #282828;
+                span {
+                    font-weight: bold;
+                    font-family: 'ProximaNova-Bold', 'Poppins', 'Open Sans';
+                    display: block;
+                }
+            }
+
+            & {
+                .numb {
+                    color: $green;
+                    font-size: 32px;
+                    position: absolute;
+                    top: 13px;
+                    left: 0px;
+
+                    @media only screen and (max-device-width: 1199px) {
+                        font-size: 28px;
+                        top: 10px;
+                        left: 5px;
                     }
 
-                    span {
-                        font-weight: bold;
-                        font-family: 'ProximaNova-Bold', 'Poppins', 'Open Sans';
-                        display: block;
+                    @media only screen and (max-device-width: 440px) {
+                        font-size: 22px;
+                        left: -5px;
                     }
                 }
+            }
 
-                & {
-                    .numb {
-                        color: $green;
-                        font-size: 32px;
-                        position: absolute;
-                        top: 13px;
-                        left: 0px;
+            &:nth-child(1) {
+                animation-delay: .2s;
+            }
 
-                        @media only screen and (max-device-width: 1199px) {
-                            font-size: 28px;
-                            top: 10px;
-                            left: 5px;
-                        }
+            &:nth-child(2) {
+                animation-delay: .4s;
+            }
 
-                        @media only screen and (max-device-width: 440px) {
-                            font-size: 22px;
-                            left: -5px;
-                        }
-                    }
-                }
+            &:nth-child(3) {
+                animation-delay: .6s;
+            }
 
-                &:nth-child(1) {
-                    animation-delay: .2s;
-                }
+            &:nth-child(4) {
+                animation-delay: .8s;
+            }
 
-                &:nth-child(2) {
-                    animation-delay: .4s;
-                }
+            &:nth-child(5) {
+                animation-delay: 1s;
+            }
 
-                &:nth-child(3) {
-                    animation-delay: .6s;
-                }
+            &:nth-child(6) {
+                animation-delay: 1.2s;
+            }
 
-                &:nth-child(4) {
-                    animation-delay: .8s;
-                }
-
-                &:nth-child(5) {
-                    animation-delay: 1s;
-                }
-
-                &:nth-child(6) {
-                    animation-delay: 1.2s;
-                }
-
-                &:nth-child(7) {
-                    animation-delay: 1.4s;
-                }
+            &:nth-child(7) {
+                animation-delay: 1.4s;
             }
         }
     }
+}
 }
 
 /* 5.  Slider OLD
@@ -1667,6 +1665,11 @@ textarea {
 
 /* 6.  About works */
 .about-works {
+    padding: 70px 0;
+
+    @media only screen and (max-device-width: 767px) {
+        padding: 40px 0;
+    }
 
     .item-box {
         opacity: 0;
@@ -2277,6 +2280,8 @@ footer {
     color: #333;
     padding-top: 40px;
 
+
+
     @media only screen and (max-device-width: 767px) {
         padding-top: 30px;
     }
@@ -2306,7 +2311,7 @@ footer {
             float: left;
             margin-right: 20px;
             margin-bottom: 10px;
-            margin-top: 10px;
+            margin-top: -1px;
             object-fit: cover;
 
             @media only screen and (max-device-width: 545px) {
@@ -2336,6 +2341,28 @@ footer {
 
     .article-content {
 
+        .wp-block-file{
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            width: 100%;
+
+            &:before{
+                content: "\f0c6";
+            }
+
+            a{
+                padding-left: 10px;
+            }
+
+            .wp-block-file__button{
+                display: none;
+            }
+        }
+
         @media only screen and (max-device-width: 991px) {
             order: 2;
         }
@@ -2357,7 +2384,7 @@ footer {
                 text-align: left;
                 margin-bottom: 10px;
                 line-height: 20px;
-                margin-top: 10px;
+                margin-top: 2px;
 
                 @media only screen and (max-device-width: 545px) {
                     text-align: center;
@@ -2492,6 +2519,7 @@ footer {
     text-align: right;
     padding-top: 120px;
     padding-bottom: 20px;
+    letter-spacing: 0;
 
     @media only screen and (max-device-width: 767px) {
         text-align: center;
@@ -2503,14 +2531,31 @@ footer {
         text-transform: uppercase;
         float: left;
         font-weight: 300;
+        text-align: left;
+        max-width: 50%;
+        overflow: hidden;
+        max-height: 60px;
         
         @media only screen and (max-device-width: 767px) {
-            display: block;
-            width: 100%;
+            // display: block;
+            // width: 100%;
+            // max-width: 100%;
+            // font-size: 18px;
+            display: none;
         }
+    }
+
+    .brdc-wrapper{
+        max-width: 50%;
+        float: right;
+        overflow: hidden;
+        max-height: 51px;
 
         @media only screen and (max-device-width: 767px) {
-            font-size: 18px;
+            width: 100%;
+            max-width: 100%;
+            overflow: unset;
+            max-height: unset;
         }
     }
 
