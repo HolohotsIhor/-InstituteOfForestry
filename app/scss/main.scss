@@ -382,125 +382,139 @@ header {
                         float: left;
                         margin-right: 15px;
                         margin-top: 6px;
-                    }
+
+                        &.vk{
+
+                            i{
+                               font-size: 31px;
+                               line-height: 21px;
+                           }
+                       }
+                   }
+               }
+
+               .search-box {
+                float: left;
+                margin-right: 15px;
+                position: relative;
+
+                label {
+                    display: none;
                 }
 
-                .search-box {
-                    float: left;
-                    margin-right: 15px;
-                    position: relative;
+                input {
+                    border-radius: 30px;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    padding-right: 2px;
+                    color: $green;
+                    background-color: $white;
+                    background-image: url(../img/search-tool.png);
+                    background-size: 33px;
+                    background-position-x: right;
+                    background-repeat: no-repeat;
+                    transition: .4s;
+                    max-width: 100px;
 
-                    label {
+                    &:focus, &:hover {
+                        background-position-x: -50px;
+                        background-position-y: -100%;
+                        max-width: 200px;
+                    }
+
+                    &:last-child {
                         display: none;
                     }
-
-                    input {
-                        border-radius: 30px;
-                        line-height: 30px;
-                        padding-left: 10px;
-                        padding-right: 2px;
-                        color: $green;
-                        background-color: $white;
-                        background-image: url(../img/search-tool.png);
-                        background-size: 33px;
-                        background-position-x: right;
-                        background-repeat: no-repeat;
-                        transition: .4s;
-                        max-width: 100px;
-
-                        &:focus {
-                            background-position-x: -50px;
-                            background-position-y: -100%;
-                            max-width: 200px;
-                        }
-
-                        &:last-child {
-                            display: none;
-                        }
-                    }
                 }
+            }
 
-                .language-switcher {
-                    float: left;
-                    margin-right: 5px;
-                    margin-top: 6px;
+            .language-switcher {
+                float: left;
+                margin-right: 5px;
+                margin-top: 6px;
 
-                    select {
-                        border-radius: 17px;
-                        font-size: 12px;
-                        color: $white;
-                        background-color: transparent;
-                        cursor: pointer;
-                        border: 0;
-                        text-transform: uppercase;
+                select {
+                    border-radius: 17px;
+                    font-size: 12px;
+                    color: $white;
+                    background-color: transparent;
+                    cursor: pointer;
+                    border: 0;
+                    text-transform: uppercase;
 
-                        &:focus,
-                        &:hover {
-                            outline: 0;
-                        }
+                    &:focus,
+                    &:hover {
+                        outline: 0;
+                    }
 
-                        option {
-                            color: #49792c;
-                            border-color: #49792c;
-                            outline-color: $green;
-                        }
+                    option {
+                        color: #49792c;
+                        border-color: #49792c;
+                        outline-color: $green;
                     }
                 }
             }
         }
     }
+}
 
-    .bottom-bar {
-        padding: 21.5px 0 17.5px 0;
-        position: fixed;
-        top: 51px;
-        left: 0;
-        width: 100%;
-        background-color: $white;
-        transition: .2s;
-        z-index: 1;
+.bottom-bar {
+    padding: 21.5px 0 17.5px 0;
+    position: fixed;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    transition: .2s;
+    z-index: 1;
 
-        @media only screen and (max-device-width: 991px) {
-            padding: 19.5px 0 15.5px 0;
-            top: 0;
-        }
+    @media only screen and (max-device-width: 991px) {
+        padding: 19.5px 0 15.5px 0;
+        top: 0;
+    }
 
-        .header__logo-box {
-            float: left;
-            padding-top: 4px;
+    .header__logo-box {
+        float: left;
+        padding-top: 4px;
 
-            a {
-                display: inline-block;
+        a {
+            display: inline-block;
 
-                img {
-                    margin-top: -20px;
-                    margin-right: 5px;
-                    max-width: 100px;
+            img {
+                margin-top: -11px;
+                width: 350px;
+                max-width: 100%;
 
-                    @media only screen and (max-device-width: 1100px) {
-                        max-width: 85px;
-                    }
-
-                    @media only screen and (max-device-width: 380px) {
-                        margin-top: -9px;
-                    }
+                @media only screen and (max-device-width: 1050px) {
+                    width: 300px;
+                    margin-top: -7px;
                 }
 
-                h1 {
-                    color: #007929;
-                    font-size: 13px;
-                    display: inline-block;
-                    line-height: 14px;
-                    text-transform: uppercase;
-                    text-align: center;
-                    letter-spacing: 0;
+                @media only screen and (max-device-width: 400px) {
+                    width: 220px;
+                    margin-top: -3px;
+                }
+            }
 
-                    @media only screen and (max-device-width: 1100px) {
-                        font-size: 12px;
+            h1 {
+                color: #007929;
+                font-size: 17px;
+                display: inline-block;
+                line-height: 14px;
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 0;
+
+                @media only screen and (max-device-width: 1100px) {
+                        // font-size: 12px;
                     }
 
                     @media only screen and (max-device-width: 380px) {
                         display: none;
+                    }
+
+                    span{
+                        font-size: 14px;
                     }
                 }
             }
@@ -2090,6 +2104,7 @@ footer {
             margin-right: 15px;
             position: relative;
             width: 100%;
+            margin-bottom: 30px;
 
             form {
                 width: 100%;
@@ -2130,7 +2145,7 @@ footer {
                     width: 80%;
                 }
 
-                &:focus {
+                &:focus, &:hover {
                     background-position-x: -50px;
                     background-position-y: -100%;
                     width: 80%;
@@ -2146,6 +2161,26 @@ footer {
 
                 &:last-child {
                     display: none;
+                }
+            }
+        }
+
+        .logos-wrapper{
+
+            @media only screen and (max-device-width: 767px) {
+                text-align: center;
+            }
+
+            img{
+                max-width: 40%;
+                float: right;
+
+                @media only screen and (max-device-width: 767px) {
+                    float: unset;
+                }
+
+                &:nth-child(2){
+                    height: 83px;
                 }
             }
         }
@@ -2356,6 +2391,7 @@ footer {
 
             a{
                 padding-left: 10px;
+                font-family: 'Poppins', 'Open Sans';
             }
 
             .wp-block-file__button{
@@ -2385,6 +2421,8 @@ footer {
                 margin-bottom: 10px;
                 line-height: 20px;
                 margin-top: 2px;
+                color: #333;
+                font-size: 14px;
 
                 @media only screen and (max-device-width: 545px) {
                     text-align: center;
@@ -2502,14 +2540,16 @@ footer {
         .post-box {
 
             h3 {
+             font-size: 14px;
+             line-height: 20px;
 
-                a {
-                    font-size: 13px;
-                    line-height: 10px;
-                }
+             a {
+                font-size: 13px;
+                line-height: 10px;
             }
         }
     }
+}
 }
 
 /* 14. Breadcrumbs contact */
@@ -2970,6 +3010,60 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    &.faq{
+
+        .card-header{
+            border-bottom: 0;
+
+            h2{
+
+                button{
+                    width: 100%;
+                    font-weight: 600;
+                    text-align: left;
+                    border-radius: 0;
+                    padding: 10px 0 8px 40px;
+                    white-space: unset;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #333;
+                    font-weight: 700;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 5px;
+                        top: 10px;
+                        display: inline-block;
+                        background: url('../img/minus.png');
+                        width: 22px;
+                        height: 22px;
+                        font-weight: 500;
+                        font-size: 24px;
+                    }
+
+                    &.collapsed {
+                        background-color: $white;
+                        color: #333;
+
+                        &:before {
+                            top: 10px;
+                            color: #333;
+                            background: url('../img/plus.png');
+                        }
+                    }
+                }
+            }
+        }
+
+        .collapse{
+            padding-left: 42px;
+            background: $white;
+            font-size: 14px;
+            line-height: 28px;
         }
     }
 }

@@ -288,6 +288,9 @@ header {
           float: left;
           margin-right: 15px;
           margin-top: 6px; }
+          header .top-bar .right-side .wrapper a.social-link.vk i {
+            font-size: 31px;
+            line-height: 21px; }
         header .top-bar .right-side .wrapper .search-box {
           float: left;
           margin-right: 15px;
@@ -309,7 +312,7 @@ header {
             -o-transition: .4s;
             transition: .4s;
             max-width: 100px; }
-            header .top-bar .right-side .wrapper .search-box input:focus {
+            header .top-bar .right-side .wrapper .search-box input:focus, header .top-bar .right-side .wrapper .search-box input:hover {
               background-position-x: -50px;
               background-position-y: -100%;
               max-width: 200px; }
@@ -354,29 +357,30 @@ header {
       header .bottom-bar .header__logo-box a {
         display: inline-block; }
         header .bottom-bar .header__logo-box a img {
-          margin-top: -20px;
-          margin-right: 5px;
-          max-width: 100px; }
-          @media only screen and (max-device-width: 1100px) {
+          margin-top: -11px;
+          width: 350px;
+          max-width: 100%; }
+          @media only screen and (max-device-width: 1050px) {
             header .bottom-bar .header__logo-box a img {
-              max-width: 85px; } }
-          @media only screen and (max-device-width: 380px) {
+              width: 300px;
+              margin-top: -7px; } }
+          @media only screen and (max-device-width: 400px) {
             header .bottom-bar .header__logo-box a img {
-              margin-top: -9px; } }
+              width: 220px;
+              margin-top: -3px; } }
         header .bottom-bar .header__logo-box a h1 {
           color: #007929;
-          font-size: 13px;
+          font-size: 17px;
           display: inline-block;
           line-height: 14px;
           text-transform: uppercase;
           text-align: center;
           letter-spacing: 0; }
-          @media only screen and (max-device-width: 1100px) {
-            header .bottom-bar .header__logo-box a h1 {
-              font-size: 12px; } }
           @media only screen and (max-device-width: 380px) {
             header .bottom-bar .header__logo-box a h1 {
               display: none; } }
+          header .bottom-bar .header__logo-box a h1 span {
+            font-size: 14px; }
       header .bottom-bar .header__logo-box .modal-search {
         display: none;
         position: fixed;
@@ -1571,7 +1575,8 @@ footer {
       float: left;
       margin-right: 15px;
       position: relative;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 30px; }
       footer .search-item .search-box form {
         width: 100%; }
       footer .search-item .search-box label {
@@ -1604,18 +1609,29 @@ footer {
         @media only screen and (max-device-width: 400px) {
           footer .search-item .search-box input {
             width: 80%; } }
-        footer .search-item .search-box input:focus {
+        footer .search-item .search-box input:focus, footer .search-item .search-box input:hover {
           background-position-x: -50px;
           background-position-y: -100%;
           width: 80%; }
           @media only screen and (max-device-width: 991px) {
-            footer .search-item .search-box input:focus {
+            footer .search-item .search-box input:focus, footer .search-item .search-box input:hover {
               width: 100%; } }
           @media only screen and (max-device-width: 767px) {
-            footer .search-item .search-box input:focus {
+            footer .search-item .search-box input:focus, footer .search-item .search-box input:hover {
               width: 100%; } }
         footer .search-item .search-box input:last-child {
           display: none; }
+    @media only screen and (max-device-width: 767px) {
+      footer .search-item .logos-wrapper {
+        text-align: center; } }
+    footer .search-item .logos-wrapper img {
+      max-width: 40%;
+      float: right; }
+      @media only screen and (max-device-width: 767px) {
+        footer .search-item .logos-wrapper img {
+          float: unset; } }
+      footer .search-item .logos-wrapper img:nth-child(2) {
+        height: 83px; }
     footer .search-item .bottom-nav-box {
       text-align: center; }
   footer .bottom-bar {
@@ -1767,7 +1783,8 @@ footer {
     .work-zone .article-content .wp-block-file:before {
       content: "\f0c6"; }
     .work-zone .article-content .wp-block-file a {
-      padding-left: 10px; }
+      padding-left: 10px;
+      font-family: 'Poppins', 'Open Sans'; }
     .work-zone .article-content .wp-block-file .wp-block-file__button {
       display: none; }
   @media only screen and (max-device-width: 991px) {
@@ -1789,7 +1806,9 @@ footer {
       text-align: left;
       margin-bottom: 10px;
       line-height: 20px;
-      margin-top: 2px; }
+      margin-top: 2px;
+      color: #333;
+      font-size: 14px; }
       @media only screen and (max-device-width: 545px) {
         .work-zone .article-content .post-box h3 {
           text-align: center; } }
@@ -1857,9 +1876,12 @@ footer {
     font-size: 14px;
     color: #3c5561;
     line-height: 28px; }
-  .work-zone #base-response .post-box h3 a {
-    font-size: 13px;
-    line-height: 10px; }
+  .work-zone #base-response .post-box h3 {
+    font-size: 14px;
+    line-height: 20px; }
+    .work-zone #base-response .post-box h3 a {
+      font-size: 13px;
+      line-height: 10px; }
 
 /* 14. Breadcrumbs contact */
 .breadcrumbs-contact {
@@ -2213,6 +2235,42 @@ footer {
               line-height: 18px;
               font-size: 12px;
               padding: 5px; } }
+  .accordion.faq .card-header {
+    border-bottom: 0; }
+    .accordion.faq .card-header h2 button {
+      width: 100%;
+      font-weight: 600;
+      text-align: left;
+      border-radius: 0;
+      padding: 10px 0 8px 40px;
+      white-space: unset;
+      font-size: 16px;
+      line-height: 21px;
+      color: #333;
+      font-weight: 700; }
+      .accordion.faq .card-header h2 button:before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 10px;
+        display: inline-block;
+        background: url("../img/minus.png");
+        width: 22px;
+        height: 22px;
+        font-weight: 500;
+        font-size: 24px; }
+      .accordion.faq .card-header h2 button.collapsed {
+        background-color: #fff;
+        color: #333; }
+        .accordion.faq .card-header h2 button.collapsed:before {
+          top: 10px;
+          color: #333;
+          background: url("../img/plus.png"); }
+  .accordion.faq .collapse {
+    padding-left: 42px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 28px; }
 
 /* 18. Pagination */
 .wp-pagenavi span {
