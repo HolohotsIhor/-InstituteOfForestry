@@ -1495,11 +1495,30 @@ textarea {
       letter-spacing: normal;
       border: 1px solid #eee;
       padding: 20px; }
-      .news-zone .owl-carousel .owl-item .text-content h2 a {
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        margin-bottom: 15px; }
+      .news-zone .owl-carousel .owl-item .text-content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        min-height: 84px;
+        max-height: 84px;
+        overflow: hidden; }
+        @media only screen and (max-width: 991px) {
+          .news-zone .owl-carousel .owl-item .text-content h2 {
+            line-height: 20px;
+            margin-bottom: 10px;
+            margin-bottom: 24px; } }
+        @media only screen and (max-width: 991px) {
+          .news-zone .owl-carousel .owl-item .text-content h2 {
+            min-height: auto;
+            max-height: auto; } }
+        .news-zone .owl-carousel .owl-item .text-content h2 a {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 24px;
+          margin-bottom: 15px; }
+          @media only screen and (max-width: 991px) {
+            .news-zone .owl-carousel .owl-item .text-content h2 a {
+              font-size: 14px;
+              font-size: 20px; } }
       .news-zone .owl-carousel .owl-item .text-content .author-info {
         margin-bottom: 20px; }
         .news-zone .owl-carousel .owl-item .text-content .author-info span {
@@ -1510,7 +1529,10 @@ textarea {
             margin-right: 3px; }
       .news-zone .owl-carousel .owl-item .text-content p {
         line-height: 28px;
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        min-height: 90px;
+        max-height: 90px;
+        overflow: hidden; }
       .news-zone .owl-carousel .owl-item .text-content a.read-more {
         font-weight: bold;
         font-family: 'Poppins', 'Open-Sans-Bold', sans-serif; }
