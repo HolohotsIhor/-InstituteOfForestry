@@ -286,6 +286,9 @@ header {
       padding: 15px; }
     header .top-bar .right-side {
       padding-top: 8px; }
+      header .top-bar .right-side .login-out {
+        display: inline-block;
+        padding-top: 8px; }
       header .top-bar .right-side .wrapper {
         float: right; }
         header .top-bar .right-side .wrapper .btn {
@@ -618,6 +621,31 @@ header {
     transition: .3s;
     padding: 45px 0;
     text-align: center; }
+    header .top_mnu .language-switcher {
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-top: 4px; }
+      header .top_mnu .language-switcher select {
+        border-radius: 17px;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        color: #fff;
+        background-color: transparent;
+        cursor: pointer;
+        border: 0;
+        text-transform: uppercase; }
+        header .top_mnu .language-switcher select:focus, header .top_mnu .language-switcher select:hover {
+          outline: 0; }
+        header .top_mnu .language-switcher select option {
+          color: #49792c;
+          border-color: #49792c;
+          outline-color: #6ab43e;
+          font-size: 12px; }
+    header .top_mnu .login-out {
+      display: inline-block;
+      margin-left: 5px; }
     header .top_mnu ul,
     header .top_mnu li {
       list-style-type: none;
@@ -1550,7 +1578,7 @@ footer {
   footer .article-wrap {
     width: 60%;
     float: right;
-    text-align: left; }
+    text-align: center; }
     @media only screen and (max-width: 991px) {
       footer .article-wrap {
         width: 90%; } }
@@ -2549,7 +2577,8 @@ footer {
 
 .user-profile .profile-user-info {
   text-align: left;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  margin-top: 40px; }
   @media only screen and (max-width: 991px) {
     .user-profile .profile-user-info {
       text-align: center; } }
