@@ -1528,9 +1528,9 @@ textarea {
             min-height: auto;
             max-height: auto; } }
         .news-zone .owl-carousel .owl-item .text-content h2 a {
-          font-size: 24px;
+          font-size: 16px;
           font-weight: 700;
-          line-height: 24px;
+          line-height: 16px;
           margin-bottom: 15px; }
           @media only screen and (max-width: 991px) {
             .news-zone .owl-carousel .owl-item .text-content h2 a {
@@ -1892,6 +1892,20 @@ footer {
       color: #6ab43e; }
       .work-zone .wp-block-file a.wp-block-file__button {
         color: #fff; }
+  .work-zone .article-content table {
+    width: 100%;
+    margin-top: 20px; }
+    .work-zone .article-content table tr td {
+      width: 33%;
+      border: solid 1px #ccc;
+      line-height: 20px;
+      font-size: 14px;
+      padding: 10px; }
+      @media only screen and (max-width: 767px) {
+        .work-zone .article-content table tr td {
+          line-height: 18px;
+          font-size: 12px;
+          padding: 5px; } }
   .work-zone .article-content .wp-block-file {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -1914,12 +1928,16 @@ footer {
           -ms-flex-order: 2;
               order: 2; } }
   .work-zone .article-content .post-box {
+    text-align: left;
     border-bottom: solid 1px #f0f0f0;
     margin-bottom: 20px;
     padding-bottom: 10px; }
     @media only screen and (max-width: 545px) {
       .work-zone .article-content .post-box {
         text-align: center; } }
+    .work-zone .article-content .post-box .date-box {
+      font-size: 13px;
+      margin-bottom: 0; }
     .work-zone .article-content .post-box:last-child {
       margin-bottom: 0; }
     .work-zone .article-content .post-box h3 {
@@ -1995,7 +2013,7 @@ footer {
   .work-zone .article-content p {
     font-size: 14px;
     color: #3c5561;
-    line-height: 28px; }
+    line-height: 22px; }
   .work-zone #base-response .post-box h3 {
     font-size: 14px;
     line-height: 20px; }
