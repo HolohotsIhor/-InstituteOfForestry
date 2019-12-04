@@ -1892,6 +1892,11 @@ footer {
       color: #6ab43e; }
       .work-zone .wp-block-file a.wp-block-file__button {
         color: #fff; }
+  .work-zone .article-content h2, .work-zone .article-content h3 {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize; }
   .work-zone .article-content table {
     width: 100%;
     margin-top: 20px; }
