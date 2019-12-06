@@ -1,8 +1,4 @@
 $(document).ready(function() {
-    /************ Cut breadcrambs **************/
-   
-
-
     /********** Map **********/
     $('.marker-box .marker-item').mouseover(function(){
         $('.list-box li a, .list-box li a span, .list-box ul li .numb').css('opacity', '.5');
