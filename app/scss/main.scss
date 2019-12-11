@@ -138,15 +138,15 @@ select {
 
 .content-hiddener {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
-    &:after {
-        content: "...";
-        position: absolute;
-        right: 0;
-        bottom: 8px;
-        font-size: 28px;
-    }
+    // &:after {
+    // 	content: "...";
+    // 	position: absolute;
+    // 	left: 0;
+    // 	bottom: -5px;
+    // 	font-size: 28px;
+    // }
 }
 
 .clearfix {
@@ -477,7 +477,6 @@ header {
                         &:focus,
                         &:hover {
                             background-position-x: -50px;
-                            /* background-position-y: -100%;*/
                             max-width: 200px;
                         }
 
@@ -489,13 +488,17 @@ header {
 
                 .language-switcher {
                     float: left;
-                    margin-right: 5px;
+                    margin-right: 10px;
                     margin-left: 5px;
-                    margin-top: 4px;
+                    margin-top: 6px;
+
+                    select::-ms-expand {
+                        display: none;
+                    }
 
                     select {
-                        border-radius: 17px;
-                        font-size: 17px;
+                        // border-radius: 17px;
+                        font-size: 19px;
                         font-weight: bold;
                         letter-spacing: -1px;
                         color: $white;
@@ -503,6 +506,19 @@ header {
                         cursor: pointer;
                         border: 0;
                         text-transform: uppercase;
+                        ///////////////////////////
+                        width: 55px;
+                        height: 27px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        background: url(../img/dropdown.png) right / 18px no-repeat;
+                        padding-right: 18px;
+                        font-family: 'Poppins', 'Open-Sans-Bold', sans-serif;
+                        background-size: 15px;
+                        border-radius: 0;
+                        background-position-x: 32px;
+
 
                         &:focus,
                         &:hover {
@@ -877,10 +893,12 @@ header {
             margin-right: 5px;
             margin-left: 5px;
             margin-top: 4px;
+            position: absolute;
+            top: 14px;
+            left: 10px;
 
             select {
-                border-radius: 17px;
-                font-size: 17px;
+                font-size: 19px;
                 font-weight: bold;
                 letter-spacing: -1px;
                 color: $white;
@@ -888,6 +906,17 @@ header {
                 cursor: pointer;
                 border: 0;
                 text-transform: uppercase;
+                width: 55px;
+                height: 27px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(../img/dropdown.png) right / 18px no-repeat;
+                padding-right: 18px;
+                font-family: 'Poppins', 'Open-Sans-Bold', sans-serif;
+                background-size: 15px;
+                border-radius: 0;
+                background-position-x: 32px;
 
                 &:focus,
                 &:hover {
@@ -1915,6 +1944,24 @@ textarea {
     background-size: cover;
     text-align: center;
 
+    .grid-button{
+
+        a{
+            background-color: $white;
+            font-size: 14px;
+            font-weight: 400;
+            outline: none;
+            padding: 10px 22px;
+            text-transform: uppercase;
+            color: $green;
+            border-radius: 4px;
+            cursor: pointer;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+        }
+    }
+
     h2 {
         color: $white;
 
@@ -1989,6 +2036,16 @@ textarea {
                 letter-spacing: normal;
                 border: 1px solid #eee;
                 padding: 20px;
+
+                &:after {
+                    content: "...";
+                    position: absolute;
+                    left: 22px;
+                    bottom: 50px;
+                    font-size: 28px;
+                    font-family: 'Poppins', 'Open-Sans-Regular', sans-serif;
+                    font-weight: 300;
+                }
 
                 h2 {
                     font-size: 20px;
@@ -2653,7 +2710,7 @@ footer {
                     color: #333;
                     font-size: 20px;
                     text-transform: uppercase;
-                    font-weight: 100;
+                    font-weight: 300;
                 }
             }
 
@@ -2794,7 +2851,7 @@ footer {
         float: left;
         font-weight: 300;
         text-align: left;
-        max-width: 50%;
+        max-width: 66.6%;
 
         @media only screen and (max-width: 767px) {
             // display: block;
@@ -2806,7 +2863,7 @@ footer {
     }
 
     .brdc-wrapper {
-        max-width: 50%;
+        max-width: 33.3%;
         float: right;
         overflow: hidden;
         max-height: 51px;
