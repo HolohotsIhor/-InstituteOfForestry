@@ -2274,7 +2274,7 @@ footer {
   color: #000;
   padding: 20px 0 20px 35px;
   font-size: 14px;
-  line-height: 29px; }
+  line-height: 22px; }
 
 .accordion.faq .card {
   border-radius: 0;
@@ -2352,7 +2352,7 @@ footer {
     text-align: left;
     font-weight: 400;
     font-size: 14px;
-    line-height: 29px; }
+    line-height: 22px; }
   .accordion .card {
     border-radius: 0;
     border: 0; }
